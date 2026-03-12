@@ -641,6 +641,65 @@ body {
   color: #161b24;
 }
 
+.cookie-banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: min(28rem, calc(100% - 1.5rem));
+  border-radius: 1rem;
+  border: 1px solid rgba(19, 27, 37, 0.14);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 38px rgba(21, 33, 48, 0.16);
+  padding: 0.9rem;
+  z-index: 80;
+  display: none;
+}
+
+.cookie-banner.is-visible {
+  display: block;
+  animation: rise 0.25s ease-out forwards;
+}
+
+.cookie-banner p {
+  margin: 0;
+  color: #2c3442;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.cookie-banner p a {
+  color: #111722;
+  font-weight: 700;
+}
+
+.cookie-actions {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.55rem;
+}
+
+.cookie-btn {
+  border: 0;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.cookie-btn.secondary {
+  background: rgba(15, 22, 34, 0.08);
+  color: #222a36;
+}
+
+.cookie-btn.primary {
+  background: #0f131a;
+  color: #f8f9fb;
+}
+
 .section-heading p {
   margin: 0;
   text-transform: uppercase;
@@ -975,6 +1034,28 @@ body {
 
   .legal-card p {
     font-size: 0.82rem;
+  }
+
+  .cookie-banner {
+    right: 0.75rem;
+    left: 0.75rem;
+    width: auto;
+    bottom: 0.75rem;
+    border-radius: 0.85rem;
+    padding: 0.78rem;
+  }
+
+  .cookie-banner p {
+    font-size: 0.8rem;
+  }
+
+  .cookie-actions {
+    justify-content: stretch;
+  }
+
+  .cookie-btn {
+    flex: 1;
+    font-size: 0.78rem;
   }
 
   .insight-card {

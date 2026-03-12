@@ -38,9 +38,6 @@
     <main>
       <section class="hero container">
         <div class="hero-copy reveal delay-1">
-          <p class="trust-pill">
-            Trusted by 2.4M athletes | 4.9 average rating
-          </p>
           <h1>The effortless workoutapp.</h1>
           <p class="lead">
             Measure your journey and achieve your body goals.
@@ -184,5 +181,51 @@
         </nav>
       </section>
     </footer>
+
+    <aside
+      id="cookie-banner"
+      class="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <p>
+        We use cookies to improve your experience. You can accept or decline
+        non-essential cookies. See our
+        <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+      <div class="cookie-actions">
+        <button type="button" id="cookie-decline" class="cookie-btn secondary">
+          Decline
+        </button>
+        <button type="button" id="cookie-accept" class="cookie-btn primary">
+          Accept
+        </button>
+      </div>
+    </aside>
+
+    <script>
+      (function () {
+        const banner = document.getElementById("cookie-banner");
+        const accept = document.getElementById("cookie-accept");
+        const decline = document.getElementById("cookie-decline");
+        const key = "vecta_cookie_consent";
+
+        if (!banner || !accept || !decline) return;
+
+        const saved = localStorage.getItem(key);
+        if (!saved) {
+          banner.classList.add("is-visible");
+        }
+
+        const closeBanner = (value) => {
+          localStorage.setItem(key, value);
+          banner.classList.remove("is-visible");
+        };
+
+        accept.addEventListener("click", () => closeBanner("accepted"));
+        decline.addEventListener("click", () => closeBanner("declined"));
+      })();
+    </script>
   </body>
 </html>

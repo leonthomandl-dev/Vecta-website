@@ -503,55 +503,142 @@ body {
   background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
 }
 
-.curve-line {
-  position: absolute;
-  left: 45%;
-  top: 43%;
-  width: 5.8rem;
-  height: 4.2rem;
-  border-bottom: 3px solid rgba(27, 36, 48, 0.55);
-  border-right: 3px solid rgba(27, 36, 48, 0.55);
-  border-bottom-right-radius: 6rem;
-  transform: rotate(2deg);
-  z-index: 1;
+.benefits {
+  margin-top: 2.4rem;
 }
 
-.data-chip {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(14, 18, 24, 0.08);
-  color: #2d3442;
+.benefits-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.benefit-card {
+  border-radius: 1.35rem;
+  border: 1px solid rgba(19, 27, 37, 0.1);
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 34px rgba(21, 33, 48, 0.08);
+  padding: 1.1rem;
+}
+
+.benefit-index {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #4f5c72;
+  padding: 0.35rem 0.52rem;
   border-radius: 999px;
-  padding: 0.5rem 0.8rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  backdrop-filter: blur(9px);
-  box-shadow: 0 14px 28px rgba(23, 35, 55, 0.13);
+  background: rgba(16, 22, 32, 0.08);
 }
 
-.chip-left-top {
-  left: 1%;
-  top: 17%;
-}
-
-.chip-left-mid {
-  left: -4%;
-  top: 38%;
-}
-
-.chip-right-top {
-  right: 0;
-  top: 12%;
-}
-
-.chip-right-mid {
-  right: -3%;
-  top: 34%;
+.benefit-card h3 {
+  margin: 0.8rem 0 0;
+  font-size: 1.04rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: #171c24;
 }
 
 .insights {
   margin-top: 5.2rem;
   padding-bottom: 4.4rem;
+}
+
+.site-footer-bar {
+  border-top: 1px solid rgba(19, 27, 37, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  margin-top: 1.2rem;
+}
+
+.footer-bar-inner {
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-bar-inner p {
+  margin: 0;
+  color: #4f596a;
+  font-size: 0.84rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #1b2230;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+.footer-links a[aria-current="page"] {
+  color: #0f1115;
+}
+
+.legal-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #1b2230;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.legal-main {
+  flex: 1;
+  padding: 2.1rem 0 2.8rem;
+}
+
+.legal-card {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(19, 27, 37, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 42px rgba(21, 33, 48, 0.08);
+  padding: 1.35rem 1.25rem;
+}
+
+.legal-card h1 {
+  margin: 0 0 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.legal-card p {
+  margin: 0.8rem 0 0;
+  color: #3f4756;
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.legal-card strong {
+  color: #161b24;
 }
 
 .section-heading p {
@@ -726,11 +813,11 @@ body {
     right: 6%;
   }
 
-  .data-chip {
-    font-size: 0.69rem;
+  .insight-grid {
+    grid-template-columns: 1fr;
   }
 
-  .insight-grid {
+  .benefits-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -830,43 +917,64 @@ body {
     font-size: 0.55rem;
   }
 
-  .curve-line {
-    width: 3.2rem;
-    height: 2.5rem;
-    border-width: 2px;
-    left: 46%;
-    top: 42%;
+  .benefits {
+    margin-top: 1.2rem;
   }
 
-  .chip-left-top {
-    left: -1%;
-    top: 10%;
+  .benefits-grid {
+    margin-top: 1rem;
+    gap: 0.7rem;
   }
 
-  .chip-left-mid {
-    left: -5%;
-    top: 30%;
+  .benefit-card {
+    border-radius: 1.1rem;
+    padding: 0.88rem;
   }
 
-  .chip-right-top {
-    right: -3%;
-    top: 8%;
-  }
-
-  .chip-right-mid {
-    right: -5%;
-    top: 26%;
-  }
-
-  .data-chip {
-    padding: 0.35rem 0.55rem;
-    font-size: 0.56rem;
-    border-radius: 999px;
+  .benefit-card h3 {
+    font-size: 0.94rem;
   }
 
   .insights {
     margin-top: 1.6rem;
     padding-bottom: 2.8rem;
+  }
+
+  .site-footer-bar {
+    margin-top: 0.9rem;
+  }
+
+  .footer-bar-inner {
+    min-height: 3.7rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0;
+    gap: 0.28rem;
+  }
+
+  .footer-bar-inner p {
+    font-size: 0.78rem;
+  }
+
+  .footer-links {
+    gap: 0.8rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .legal-main {
+    padding: 1.15rem 0 2rem;
+  }
+
+  .legal-card {
+    border-radius: 1.1rem;
+    padding: 0.95rem 0.82rem;
+  }
+
+  .legal-card p {
+    font-size: 0.82rem;
   }
 
   .insight-card {

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vecta | Workout Data That Moves With You</title>
+    <meta
+      name="description"
+      content="Vecta helps athletes track workouts, volume, recovery, and progress with a precision-first interface on mobile and desktop."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header container reveal">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="logo.svg" alt="" class="brand-logo" />
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#">Overview</a>
+        <a href="#">Insights</a>
+        <a href="#">Analytics</a>
+        <a href="#">Pricing</a>
+      </nav>
+      <a class="header-cta" href="#">Start Free</a>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy reveal delay-1">
+          <p class="trust-pill">
+            Trusted by 2.4M athletes | 4.9 average rating
+          </p>
+          <h1>The effortless workoutapp.</h1>
+          <p class="lead">
+            Measure your journey and achieve your body goals.
+          </p>
+          <div class="hero-actions">
+            <a class="store-btn dark app-store-btn" href="#">
+              <span class="apple-logo-mark" aria-hidden="true"></span>
+              <span>
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+          </div>
+          <div class="kpi-row">
+            <article>
+              <h3>+18%</h3>
+              <p>Volume growth this month</p>
+            </article>
+            <article>
+              <h3>142 bpm</h3>
+              <p>Average session heart rate</p>
+            </article>
+            <article>
+              <h3>31</h3>
+              <p>Logged workouts in 30 days</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2" aria-hidden="true">
+          <span class="data-chip chip-left-top">Power 386w</span>
+          <span class="data-chip chip-left-mid">Pace 4:21/km</span>
+          <span class="data-chip chip-right-top">Recovery 82%</span>
+          <span class="data-chip chip-right-mid">Sleep 7h 46m</span>
+
+          <div class="phone-stack">
+            <article class="phone phone-primary">
+              <div class="screen screen-primary">
+                <img
+                  class="screen-image"
+                  src="screen-home.png"
+                  alt="Workout home dashboard screen"
+                />
+              </div>
+            </article>
+
+            <div class="curve-line"></div>
+
+            <article class="phone phone-secondary">
+              <div class="screen screen-secondary">
+                <img
+                  class="screen-image"
+                  src="screen-upper-chest.png"
+                  alt="Upper chest progress analytics screen"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="insights container reveal delay-3">
+        <div class="section-heading">
+          <p>Data-first workflow</p>
+          <h2>Everything important is one glance away.</h2>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card chart-card">
+            <header>
+              <h3>Training Load Trend</h3>
+              <p>Last 8 sessions</p>
+            </header>
+            <svg viewBox="0 0 420 180" role="img" aria-label="Training trend chart">
+              <polyline
+                fill="none"
+                stroke="url(#lineGradient)"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                points="20,150 75,124 130,135 185,98 240,85 295,108 350,74 400,44"
+              />
+              <defs>
+                <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#17a9ff" />
+                  <stop offset="100%" stop-color="#32d27f" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </article>
+
+          <article class="insight-card table-card">
+            <header>
+              <h3>Recent Sessions</h3>
+              <p>Auto-synced from phone and watch</p>
+            </header>
+            <div class="mini-table">
+              <div><span>Upper Strength</span><strong>72 min</strong></div>
+              <div><span>Recovery Run</span><strong>38 min</strong></div>
+              <div><span>Lower Power</span><strong>64 min</strong></div>
+              <div><span>Interval Bike</span><strong>42 min</strong></div>
+            </div>
+          </article>
+
+          <article class="insight-card split-card">
+            <header>
+              <h3>Recovery Compass</h3>
+              <p>Sleep, stress, and readiness in balance</p>
+            </header>
+            <div class="split-meter">
+              <span style="--pct: 83">Sleep 83%</span>
+              <span style="--pct: 76">HRV 76%</span>
+              <span style="--pct: 89">Energy 89%</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

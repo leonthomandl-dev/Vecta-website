@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warteliste | Vecta</title>
+    <meta
+      name="description"
+      content="Trag dich mit Name und E-Mail in die Vecta-Warteliste ein."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="waitlist-page container reveal">
+      <article class="waitlist-only-card">
+        <div class="waitlist-only-layout">
+          <section class="waitlist-only-content">
+            <p class="waitlist-kicker">Frueher Zugang</p>
+            <h1>Trag dich in die Vecta-Warteliste ein.</h1>
+            <p>
+              Gib deinen Namen und deine E-Mail ein, um beim Launch sofort dabei
+              zu sein.
+            </p>
+
+            <form
+              id="waitlist-form"
+              class="waitlist-form"
+              novalidate
+              data-success="Du stehst auf der Warteliste. Wir melden uns per E-Mail."
+              data-error="Bitte gib einen gueltigen Namen und eine gueltige E-Mail ein."
+              data-remote-error="Die Anmeldung ist noch nicht verbunden. Bitte die Google Apps Script Bereitstellung abschliessen."
+            >
+              <label class="field-group">
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Alex Morgan"
+                  required
+                />
+              </label>
+              <label class="field-group">
+                <span>E-Mail</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="alex@example.com"
+                  required
+                />
+              </label>
+              <button type="submit" class="waitlist-btn">Warteliste beitreten</button>
+            </form>
+            <p id="waitlist-message" class="waitlist-message" aria-live="polite"></p>
+          </section>
+
+          <aside class="waitlist-phone-wrap" aria-hidden="true">
+            <div class="waitlist-phone">
+              <img src="screen-home.png" alt="" />
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      (function () {
+        const form = document.getElementById("waitlist-form");
+        const message = document.getElementById("waitlist-message");
+        const WAITLIST_ENDPOINT =
+          "https://script.google.com/macros/s/REPLACE_WITH_DEPLOYED_WEB_APP_ID/exec";
+
+        if (!form || !message) return;
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const name = form.elements.name.value.trim();
+          const email = form.elements.email.value.trim();
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!name || !emailPattern.test(email)) {
+            message.textContent = form.dataset.error;
+            message.classList.remove("success");
+            message.classList.add("error");
+            return;
+          }
+
+          if (WAITLIST_ENDPOINT.includes("REPLACE_WITH_DEPLOYED_WEB_APP_ID")) {
+            message.textContent = form.dataset.remoteError;
+            message.classList.remove("success");
+            message.classList.add("error");
+            return;
+          }
+
+          try {
+            await fetch(WAITLIST_ENDPOINT, {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+              body: JSON.stringify({
+                name: name,
+                email: email,
+                locale: "de",
+                source: "waitlist-de.html",
+                userAgent: navigator.userAgent,
+              }),
+            });
+
+            form.reset();
+            message.textContent = form.dataset.success;
+            message.classList.remove("error");
+            message.classList.add("success");
+          } catch (_error) {
+            message.textContent = form.dataset.remoteError;
+            message.classList.remove("success");
+            message.classList.add("error");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

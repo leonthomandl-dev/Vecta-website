@@ -20,6 +20,12 @@
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
 
+    <section class="waitlist reveal delay-1">
+      <a class="waitlist-card waitlist-link-card" href="waitlist-de.html">
+        <span class="waitlist-one-line">get early access</span>
+      </a>
+    </section>
+
     <header class="site-header container reveal">
       <a class="brand" href="index-de.html">
         <span class="brand-mark" aria-hidden="true">
@@ -177,49 +183,6 @@
         </div>
       </section>
 
-      <section class="waitlist container reveal delay-3">
-        <article class="waitlist-card">
-          <div class="waitlist-copy">
-            <p>Frueher Zugang</p>
-            <h2>Trag dich in die Vecta-Warteliste ein.</h2>
-            <span
-              >Erhalte als Erste:r Zugang zu neuen Trainings-Einblicken und
-              Funktionen.</span
-            >
-          </div>
-
-          <form
-            id="waitlist-form"
-            class="waitlist-form"
-            novalidate
-            data-success="Du stehst auf der Warteliste. Wir melden uns per E-Mail."
-            data-error="Bitte gib einen gueltigen Namen und eine gueltige E-Mail ein."
-          >
-            <label class="field-group">
-              <span>Name</span>
-              <input
-                type="text"
-                name="name"
-                autocomplete="name"
-                placeholder="Alex Morgan"
-                required
-              />
-            </label>
-            <label class="field-group">
-              <span>E-Mail</span>
-              <input
-                type="email"
-                name="email"
-                autocomplete="email"
-                placeholder="alex@example.com"
-                required
-              />
-            </label>
-            <button type="submit" class="waitlist-btn">Warteliste beitreten</button>
-          </form>
-          <p id="waitlist-message" class="waitlist-message" aria-live="polite"></p>
-        </article>
-      </section>
     </main>
 
     <footer class="site-footer-bar">
@@ -278,41 +241,5 @@
       })();
     </script>
 
-    <script>
-      (function () {
-        const form = document.getElementById("waitlist-form");
-        const message = document.getElementById("waitlist-message");
-        const key = "vecta_waitlist_entries";
-
-        if (!form || !message) return;
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          const name = form.elements.name.value.trim();
-          const email = form.elements.email.value.trim();
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-          if (!name || !emailPattern.test(email)) {
-            message.textContent = form.dataset.error;
-            message.classList.remove("success");
-            message.classList.add("error");
-            return;
-          }
-
-          const existing = JSON.parse(localStorage.getItem(key) || "[]");
-          existing.push({
-            name: name,
-            email: email,
-            createdAt: new Date().toISOString(),
-          });
-          localStorage.setItem(key, JSON.stringify(existing));
-
-          form.reset();
-          message.textContent = form.dataset.success;
-          message.classList.remove("error");
-          message.classList.add("success");
-        });
-      })();
-    </script>
   </body>
 </html>

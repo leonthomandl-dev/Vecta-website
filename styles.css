@@ -11,6 +11,8 @@
   --shadow: 0 24px 70px rgba(12, 22, 38, 0.14);
   --radius-lg: 28px;
   --radius-md: 18px;
+  --sticky-header-offset: 1rem;
+  --sticky-header-scroll-space: 8rem;
 }
 
 *,
@@ -68,11 +70,24 @@ body {
 }
 
 .site-header {
+  position: sticky;
+  top: var(--sticky-header-offset);
+  z-index: 40;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 2.8rem;
-  padding-top: 2rem;
+  margin-top: 1rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(15, 17, 21, 0.08);
+  border-radius: 1.55rem;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 38px rgba(13, 22, 36, 0.1);
+}
+
+section[id] {
+  scroll-margin-top: var(--sticky-header-scroll-space);
 }
 
 .brand {
@@ -846,121 +861,6 @@ body {
   padding-bottom: 0;
 }
 
-.waitlist {
-  padding-top: 1.25rem;
-  margin-bottom: 1.1rem;
-}
-
-.waitlist-card {
-  position: relative;
-  border-radius: 1.7rem;
-  border: 1px solid rgba(13, 22, 35, 0.08);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 46%),
-    linear-gradient(105deg, #0f1722 0%, #15304a 58%, #1bb1ff 100%);
-  box-shadow: 0 22px 48px rgba(14, 38, 64, 0.2);
-  padding: 1.25rem 1.35rem;
-  color: #f8fcff;
-  overflow: hidden;
-}
-
-.waitlist-card::before {
-  content: "";
-  position: absolute;
-  inset: auto -3rem -6rem auto;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(48, 207, 132, 0.3), rgba(48, 207, 132, 0) 70%);
-  pointer-events: none;
-}
-
-.waitlist-link-card {
-  text-decoration: none;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1.35rem;
-}
-
-.waitlist-one-line {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.3rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.waitlist-copy {
-  position: relative;
-  z-index: 1;
-  min-width: 0;
-  display: grid;
-  gap: 0.2rem;
-}
-
-.waitlist-copy p {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: rgba(248, 252, 255, 0.86);
-}
-
-.waitlist-copy h2 {
-  margin: 0.12rem 0 0;
-  font-family: "Space Grotesk", sans-serif;
-  letter-spacing: -0.02em;
-  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
-  color: #ffffff;
-  line-height: 1.08;
-}
-
-.waitlist-copy span {
-  margin-top: 0.25rem;
-  display: block;
-  color: rgba(248, 252, 255, 0.92);
-  font-size: 0.94rem;
-  line-height: 1.6;
-}
-
-.waitlist-link-cta {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  border-radius: 999px;
-  padding: 0.56rem 0.96rem;
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: #0f1722;
-  background: rgba(255, 255, 255, 0.96);
-  white-space: nowrap;
-  box-shadow: 0 12px 24px rgba(9, 17, 29, 0.16);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.waitlist-link-card:hover .waitlist-link-cta,
-.waitlist-link-card:focus-visible .waitlist-link-cta {
-  background: #ffffff;
-  box-shadow: 0 16px 30px rgba(9, 17, 29, 0.2);
-  transform: translateY(-1px);
-}
-
 .waitlist-page {
   min-height: 100vh;
   display: grid;
@@ -1165,10 +1065,19 @@ body {
 }
 
 .legal-header {
+  position: sticky;
+  top: var(--sticky-header-offset);
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.6rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(15, 17, 21, 0.08);
+  border-radius: 1.45rem;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 38px rgba(13, 22, 36, 0.1);
 }
 
 .back-link {
@@ -1613,16 +1522,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .waitlist-link-card {
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-  }
-
-  .waitlist-link-cta {
-    grid-column: 1 / -1;
-    justify-self: start;
-  }
-
   .waitlist-only-layout {
     grid-template-columns: 1fr;
   }
@@ -1641,6 +1540,11 @@ body {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --sticky-header-offset: 0.7rem;
+    --sticky-header-scroll-space: 7rem;
+  }
+
   .container {
     width: min(1100px, calc(100% - 1.75rem));
   }
@@ -1651,6 +1555,12 @@ body {
 
   .brand-mark {
     width: 6.1rem;
+  }
+
+  .site-header,
+  .legal-header {
+    padding: 0.72rem 0.9rem;
+    border-radius: 1.2rem;
   }
 
   .hero-copy h1 {
@@ -1791,41 +1701,6 @@ body {
 
   .benefit-card h3 {
     font-size: 0.94rem;
-  }
-
-  .waitlist {
-    padding-top: 0.75rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .waitlist-card {
-    border-radius: 1.1rem;
-    padding: 1.1rem;
-  }
-
-  .waitlist-link-card {
-    grid-template-columns: 1fr;
-    align-items: flex-start;
-    gap: 0.72rem;
-  }
-
-  .waitlist-copy span {
-    font-size: 0.86rem;
-    line-height: 1.55;
-  }
-
-  .waitlist-copy h2 {
-    font-size: clamp(1rem, 5vw, 1.28rem);
-  }
-
-  .waitlist-link-cta {
-    width: 100%;
-    font-size: 0.76rem;
-    padding: 0.56rem 0.8rem;
-  }
-
-  .waitlist-one-line {
-    font-size: 0.7rem;
   }
 
   .waitlist-form {

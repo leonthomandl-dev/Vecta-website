@@ -13,8 +13,8 @@
   --radius-md: 18px;
   --sticky-header-offset: 1rem;
   --sticky-header-scroll-space: 8rem;
-  --container-max: 1380px;
-  --container-gutter: 1.8rem;
+  --container-max: 1480px;
+  --container-gutter: 1.2rem;
 }
 
 *,
@@ -190,11 +190,12 @@ section[id] {
   align-items: center;
   gap: 4.2rem;
   padding-top: 6.25rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0;
 }
 
 .hero-copy {
   max-width: 43rem;
+  margin-top: -0.4rem;
 }
 
 .trust-pill {
@@ -212,12 +213,16 @@ section[id] {
 }
 
 .hero-copy h1 {
-  margin: 1.55rem 0 0;
+  margin: 1.35rem 0 0;
   font-family: "Space Grotesk", "Manrope", sans-serif;
   font-size: clamp(2.3rem, 4.4vw, 4.1rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
-  max-width: 12ch;
+  max-width: 19ch;
+}
+
+.hero-copy h1 .hero-line {
+  display: block;
 }
 
 .lead {
@@ -408,35 +413,48 @@ section[id] {
 }
 
 .kpi-row {
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.95rem;
+  gap: 1.35rem;
 }
 
 .kpi-row article {
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid rgba(22, 28, 38, 0.08);
-  border-radius: 22px;
-  padding: 1.45rem 1.3rem;
+  border-radius: 2rem;
+  padding: 2rem 1.7rem;
   backdrop-filter: blur(14px);
   display: grid;
   align-content: start;
-  gap: 0.32rem;
+  gap: 0.55rem;
+  min-height: 100%;
 }
 
 .kpi-row h3 {
   margin: 0;
-  font-size: 1.08rem;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
+  font-size: 1.24rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .kpi-row p {
-  margin: 0.22rem 0 0;
+  margin: 0;
   color: #5c6270;
-  font-size: 0.88rem;
-  line-height: 1.62;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.hero-highlights {
+  margin-top: 5.6rem;
+}
+
+.hero-highlights-heading {
+  max-width: 44rem;
+}
+
+.hero-highlights .section-heading h2 {
+  max-width: 20ch;
 }
 
 .hero-visual {
@@ -447,30 +465,72 @@ section[id] {
 .phone-stack {
   position: absolute;
   inset: 0;
+  --phone-top: 8.5%;
+  --phone-primary-offset: -107%;
+  --phone-secondary-offset: 3%;
+  --phone-secondary-tilt: 5deg;
 }
 
 .phone {
   position: absolute;
-  width: 16rem;
+  width: calc(32.4rem * 1170 / 2532);
   height: 32.4rem;
   border-radius: 2.8rem;
-  border: 0.62rem solid #20242b;
-  box-shadow: var(--shadow);
-  background: #090b0f;
-  overflow: hidden;
+  border: 0.26rem solid #111317;
+  box-shadow:
+    0 0 0 0.08rem rgba(214, 218, 224, 0.84),
+    0 0 0 0.16rem rgba(38, 42, 48, 0.92),
+    0 1.1rem 2.7rem rgba(17, 24, 39, 0.2);
+  background: #06070a;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  min-width: 2.9rem;
+  max-width: 4.3rem;
+  height: clamp(0.72rem, 3.8%, 1.02rem);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at calc(100% - 0.62rem) 50%, #1d4f97 0 0.1rem, #091018 0.13rem, transparent 0.18rem),
+    linear-gradient(#040506, #040506);
+  box-shadow:
+    0 0.03rem 0.08rem rgba(255, 255, 255, 0.08) inset,
+    0 0 0 0.05rem rgba(14, 16, 20, 0.96);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.phone::after {
+  content: "";
+  position: absolute;
+  inset: 0 -0.32rem 0 -0.32rem;
+  background:
+    linear-gradient(#12151a, #12151a) left 0.04rem top 14% / 0.13rem 6.2% no-repeat,
+    linear-gradient(#12151a, #12151a) left 0.04rem top 20.7% / 0.16rem 10.8% no-repeat,
+    linear-gradient(#12151a, #12151a) right 0.04rem top 19% / 0.13rem 7.5% no-repeat;
+  pointer-events: none;
+  z-index: 4;
 }
 
 .phone-primary {
-  left: 4%;
-  top: 10%;
-  transform: rotate(-4.5deg);
+  left: 50%;
+  top: var(--phone-top);
+  transform: translateX(var(--phone-primary-offset));
   z-index: 2;
 }
 
 .phone-secondary {
-  right: 5%;
-  top: 7%;
-  transform: rotate(4.5deg);
+  left: 50%;
+  top: var(--phone-top);
+  transform-origin: 50% 100%;
+  transform: translateX(var(--phone-secondary-offset)) rotate(var(--phone-secondary-tilt));
   z-index: 3;
 }
 
@@ -480,17 +540,19 @@ section[id] {
   border-radius: 2.5rem;
   padding: 0;
   color: #f7f9fc;
+  background: #000;
   overflow: hidden;
   display: grid;
   place-items: center;
+  box-shadow: 0 0 0 0.08rem #020304;
 }
 
 .screen-primary {
-  background: #e5e8ed;
+  background: #000;
 }
 
 .screen-secondary {
-  background: #e5e8ed;
+  background: #000;
   color: #11151c;
 }
 
@@ -1466,22 +1528,28 @@ section[id] {
     padding-bottom: 0;
   }
 
+  .hero-copy {
+    margin-top: 0;
+  }
+
+  .hero-highlights {
+    margin-top: 4.5rem;
+  }
+
   .hero-visual {
     min-height: 40rem;
     margin-top: 1.5rem;
   }
 
   .phone {
-    width: 14rem;
+    width: calc(28.4rem * 1170 / 2532);
     height: 28.4rem;
   }
 
-  .phone-primary {
-    left: 6%;
-  }
-
-  .phone-secondary {
-    right: 6%;
+  .phone-stack {
+    --phone-primary-offset: -105%;
+    --phone-secondary-offset: 2%;
+    --phone-secondary-tilt: 4.5deg;
   }
 
   .story,
@@ -1538,7 +1606,7 @@ section[id] {
   :root {
     --sticky-header-offset: 0.7rem;
     --sticky-header-scroll-space: 7rem;
-    --container-gutter: 1.1rem;
+    --container-gutter: 0.9rem;
   }
 
   .brand {
@@ -1557,6 +1625,10 @@ section[id] {
 
   .hero-copy h1 {
     font-size: clamp(2.05rem, 12vw, 3.1rem);
+  }
+
+  .hero-copy h1 .hero-line {
+    display: inline;
   }
 
   .lead {
@@ -1579,6 +1651,20 @@ section[id] {
 
   .kpi-row {
     grid-template-columns: 1fr;
+    margin-top: 1.4rem;
+  }
+
+  .kpi-row article {
+    padding: 1.45rem 1.2rem;
+    border-radius: 1.45rem;
+  }
+
+  .kpi-row h3 {
+    font-size: 1.06rem;
+  }
+
+  .kpi-row p {
+    font-size: 0.94rem;
   }
 
   .hero-visual {
@@ -1586,20 +1672,17 @@ section[id] {
   }
 
   .phone {
-    width: 9.3rem;
+    width: calc(18.8rem * 1170 / 2532);
     height: 18.8rem;
     border-radius: 1.9rem;
-    border-width: 0.45rem;
+    border-width: 0.22rem;
   }
 
-  .phone-primary {
-    left: 8%;
-    top: 10%;
-  }
-
-  .phone-secondary {
-    right: 8%;
-    top: 10%;
+  .phone-stack {
+    --phone-top: 10%;
+    --phone-primary-offset: -104%;
+    --phone-secondary-offset: 2%;
+    --phone-secondary-tilt: 4deg;
   }
 
   .screen {
@@ -1662,6 +1745,10 @@ section[id] {
   .cta-band,
   .insights {
     margin-top: 2.8rem;
+  }
+
+  .hero-highlights {
+    margin-top: 3rem;
   }
 
   .benefits-grid {

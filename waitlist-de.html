@@ -8,6 +8,7 @@
       name="description"
       content="Trag dich mit Name und E-Mail in die Vecta-Warteliste ein."
     />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +23,14 @@
 
     <main class="waitlist-page container reveal">
       <article class="waitlist-only-card">
+        <header class="waitlist-page-top">
+          <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="logo.svg" alt="" class="brand-logo" />
+            </span>
+          </a>
+          <a class="back-link" href="index-de.html">Zur Startseite</a>
+        </header>
         <div class="waitlist-only-layout">
           <section class="waitlist-only-content">
             <p class="waitlist-kicker">Frueher Zugang</p>
@@ -38,6 +47,8 @@
               data-success="Du stehst auf der Warteliste. Wir melden uns per E-Mail."
               data-error="Bitte gib einen gueltigen Namen und eine gueltige E-Mail ein."
               data-remote-error="Die Anmeldung ist noch nicht verbunden. Bitte die Google Apps Script Bereitstellung abschliessen."
+              data-loading="Deine Anmeldung wird gesendet..."
+              data-loading-button="Wird gesendet..."
             >
               <label class="field-group">
                 <span>Name</span>
@@ -61,6 +72,13 @@
               </label>
               <button type="submit" class="waitlist-btn">Warteliste beitreten</button>
             </form>
+            <div
+              id="waitlist-progress"
+              class="waitlist-progress"
+              aria-hidden="true"
+            >
+              <span class="waitlist-progress-bar"></span>
+            </div>
             <p id="waitlist-message" class="waitlist-message" aria-live="polite"></p>
           </section>
 
@@ -77,10 +95,39 @@
       (function () {
         const form = document.getElementById("waitlist-form");
         const message = document.getElementById("waitlist-message");
+        const progress = document.getElementById("waitlist-progress");
+        const submitButton = form ? form.querySelector(".waitlist-btn") : null;
         const WAITLIST_ENDPOINT =
           "https://script.google.com/macros/s/AKfycbxmElKR7VeXZjeyqgShERK5TgEAsx4_urqyZaHBWtoBIobFFCQYGoKWHWKFpdqAfEuP/exec";
 
-        if (!form || !message) return;
+        if (!form || !message || !progress || !submitButton) return;
+
+        const defaultButtonLabel = submitButton.textContent;
+
+        function setMessageState(type, text) {
+          message.textContent = text;
+          message.classList.remove("success", "error", "pending");
+
+          if (type) {
+            message.classList.add(type);
+          }
+        }
+
+        function setSubmitting(isSubmitting) {
+          form.classList.toggle("is-submitting", isSubmitting);
+          form.setAttribute("aria-busy", isSubmitting ? "true" : "false");
+          progress.classList.toggle("is-visible", isSubmitting);
+          submitButton.textContent = isSubmitting
+            ? form.dataset.loadingButton
+            : defaultButtonLabel;
+
+          Array.prototype.forEach.call(
+            form.querySelectorAll("input, button"),
+            function (field) {
+              field.disabled = isSubmitting;
+            }
+          );
+        }
 
         form.addEventListener("submit", async function (event) {
           event.preventDefault();
@@ -88,19 +135,20 @@
           const email = form.elements.email.value.trim();
           const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+          setSubmitting(false);
+
           if (!name || !emailPattern.test(email)) {
-            message.textContent = form.dataset.error;
-            message.classList.remove("success");
-            message.classList.add("error");
+            setMessageState("error", form.dataset.error);
             return;
           }
 
           if (WAITLIST_ENDPOINT.includes("REPLACE_WITH_DEPLOYED_WEB_APP_ID")) {
-            message.textContent = form.dataset.remoteError;
-            message.classList.remove("success");
-            message.classList.add("error");
+            setMessageState("error", form.dataset.remoteError);
             return;
           }
+
+          setSubmitting(true);
+          setMessageState("pending", form.dataset.loading);
 
           try {
             await fetch(WAITLIST_ENDPOINT, {
@@ -119,13 +167,11 @@
             });
 
             form.reset();
-            message.textContent = form.dataset.success;
-            message.classList.remove("error");
-            message.classList.add("success");
+            setMessageState("success", form.dataset.success);
           } catch (_error) {
-            message.textContent = form.dataset.remoteError;
-            message.classList.remove("success");
-            message.classList.add("error");
+            setMessageState("error", form.dataset.remoteError);
+          } finally {
+            setSubmitting(false);
           }
         });
       })();

@@ -1,0 +1,94 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="631"
+  height="1066"
+  viewBox="0 0 631 1066"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="skinBase" x1="309" y1="338" x2="419" y2="1066" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#231510" />
+      <stop offset="52%" stop-color="#1b110d" />
+      <stop offset="100%" stop-color="#140c09" />
+    </linearGradient>
+    <linearGradient id="fingerShade" x1="48" y1="398" x2="146" y2="714" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2d1c16" />
+      <stop offset="100%" stop-color="#160e0b" />
+    </linearGradient>
+    <linearGradient id="thumbShade" x1="452" y1="420" x2="566" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2a1a15" />
+      <stop offset="100%" stop-color="#130c09" />
+    </linearGradient>
+    <radialGradient id="palmHighlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(404 520) rotate(90) scale(268 190)">
+      <stop offset="0%" stop-color="#483028" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#483028" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="wristHighlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(338 852) rotate(90) scale(256 162)">
+      <stop offset="0%" stop-color="#34211b" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#34211b" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softShadow" x="0" y="302" width="631" height="764" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#140d0a" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path
+      d="M322 1066C278 1040 244 974 216 872C188 768 176 642 182 494C188 404 212 340 262 306C306 276 372 282 434 318C504 358 554 422 566 512C578 614 566 732 530 866C506 956 462 1022 396 1060L322 1066Z"
+      fill="url(#skinBase)"
+    />
+    <path
+      d="M454 470C504 432 556 444 584 494C608 540 606 618 574 674C548 722 506 742 464 730C434 722 414 692 410 646C406 592 420 510 454 470Z"
+      fill="url(#thumbShade)"
+    />
+
+    <path
+      d="M112 404C138 384 172 388 196 414C220 440 224 474 208 504C194 528 166 542 138 540C110 538 86 520 74 490C60 456 72 426 112 404Z"
+      fill="url(#fingerShade)"
+    />
+    <path
+      d="M94 486C124 466 160 472 186 500C210 526 214 562 196 592C180 618 148 630 118 624C88 618 62 596 50 562C38 530 50 504 94 486Z"
+      fill="url(#fingerShade)"
+    />
+    <path
+      d="M84 578C118 558 154 564 180 592C202 616 206 650 190 678C174 706 144 716 114 710C82 704 54 682 40 646C28 614 38 590 84 578Z"
+      fill="url(#fingerShade)"
+    />
+    <path
+      d="M96 670C124 652 156 658 178 682C198 704 202 734 188 760C174 784 146 794 118 790C90 786 62 766 48 734C36 704 46 684 96 670Z"
+      fill="url(#fingerShade)"
+    />
+
+    <ellipse cx="404" cy="520" rx="184" ry="266" fill="url(#palmHighlight)" />
+    <ellipse cx="338" cy="852" rx="156" ry="214" fill="url(#wristHighlight)" />
+
+    <path
+      d="M196 842C224 890 244 922 264 938C286 958 314 970 346 972"
+      stroke="#4a3028"
+      stroke-opacity="0.18"
+      stroke-width="6"
+      stroke-linecap="round"
+    />
+    <path
+      d="M114 420C148 432 174 452 188 480"
+      stroke="#5b4035"
+      stroke-opacity="0.2"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M92 510C126 522 152 544 166 574"
+      stroke="#5b4035"
+      stroke-opacity="0.18"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M82 604C116 616 140 638 154 666"
+      stroke="#5b4035"
+      stroke-opacity="0.16"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>

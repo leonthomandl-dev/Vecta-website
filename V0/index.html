@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vecta | Fast Workout Logging for Strength Progress</title>
+    <meta
+      name="description"
+      content="Vecta is a strength training app for fast workout logging, clear progress tracking, and consistency tools that help you see whether your training is working."
+    />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header container reveal">
+      <a class="brand" href="index.html" aria-label="Vecta home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="../logo.svg" alt="" class="brand-logo" />
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#progress">Progress</a>
+        <a href="#features">Features</a>
+        <a href="#why-vecta">Why Vecta</a>
+        <a href="#join">Waitlist</a>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-toggle" role="group" aria-label="Language switcher">
+          <a href="index.html" aria-current="page">EN</a>
+          <a href="index-de.html">DE</a>
+        </div>
+        <a class="header-cta" href="../waitlist.html">Get Early Access</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy reveal delay-1">
+          <p class="trust-pill">Fast workout logging with real strength progress</p>
+          <h1>
+            <span class="hero-line">The strength</span>
+            <span class="hero-line">training app that</span>
+            <span class="hero-line">shows your progress.</span>
+          </h1>
+          <p class="lead">
+            Vecta helps you log workouts fast, measure real progress, and stay
+            consistent with the training that matters.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary hero-highlight-cta" href="../waitlist.html">
+              Get Early Access
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2" aria-hidden="true">
+          <div class="phone-stack">
+            <article class="phone phone-primary">
+              <div class="screen screen-primary">
+                <img
+                  class="screen-image"
+                  src="../IMG_2460.PNG"
+                  alt="Progress screen with strength index chart"
+                />
+              </div>
+            </article>
+
+            <article class="phone phone-secondary">
+              <div class="screen screen-secondary">
+                <img
+                  class="screen-image"
+                  src="../IMG_2461.PNG"
+                  alt="Home dashboard screen with calendar and start workout button"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="hero-highlights container reveal delay-3"
+        aria-labelledby="hero-highlights-title"
+      >
+        <div class="section-heading hero-highlights-heading">
+          <p>Core Benefits</p>
+          <h2 id="hero-highlights-title">
+            Fast logging, flexible customization, visible progress, and consistency in one place.
+          </h2>
+        </div>
+        <div class="kpi-row">
+          <article>
+            <h3>Fast in-session logging</h3>
+            <p>
+              Start a workout fast, reuse templates, and load your last working
+              sets.
+            </p>
+          </article>
+          <article>
+            <h3>Clear proof of progress</h3>
+            <p>
+              Track Strength Index, top weights, volume, and estimated 1RM in
+              one place.
+            </p>
+          </article>
+          <article>
+            <h3>Built around your training</h3>
+            <p>
+              Create your own training plans, save templates, and add custom
+              exercises that match how you actually train.
+            </p>
+          </article>
+          <article>
+            <h3>Consistency that compounds</h3>
+            <p>
+              Keep momentum with streaks, calendars, badges, and full workout
+              history.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="insights container reveal delay-3" id="progress">
+        <div class="section-heading">
+          <p>Progress View</p>
+          <h2>See whether your training is actually working.</h2>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card chart-card">
+            <header>
+              <h3>Strength Index Trend</h3>
+              <p>Logged workouts become clear proof that you are getting stronger.</p>
+            </header>
+            <svg viewBox="0 0 420 180" role="img" aria-label="Strength Index trend chart">
+              <polyline
+                fill="none"
+                stroke="url(#lineGradient)"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                points="20,150 75,138 130,128 185,112 240,96 295,88 350,66 400,44"
+              />
+              <defs>
+                <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#17a9ff" />
+                  <stop offset="100%" stop-color="#32d27f" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </article>
+
+          <article class="insight-card table-card">
+            <header>
+              <h3>Workout Context</h3>
+              <p>Everything you need to make the next set smarter.</p>
+            </header>
+            <div class="mini-table">
+              <div><span>Template</span><strong>Upper A</strong></div>
+              <div><span>Previous set</span><strong>80 kg x 8</strong></div>
+              <div><span>Rest timer</span><strong>01:30</strong></div>
+              <div><span>Machine scan</span><strong>Chest Press</strong></div>
+            </div>
+          </article>
+
+          <article class="insight-card split-card">
+            <header>
+              <h3>Consistency Momentum</h3>
+              <p>Progress stays motivating when the full training rhythm is visible.</p>
+            </header>
+            <div class="split-meter">
+              <span style="--pct: 82">Streak: 8 weeks with 3+ sessions</span>
+              <span style="--pct: 74">Calendar: rest and sick days tracked</span>
+              <span style="--pct: 88">Milestones: badges and history in one place</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-section container reveal delay-3" id="features">
+        <div class="section-heading">
+          <p>Feature Blocks</p>
+          <h2>Built for real training, not just recording sets.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-meta">01</span>
+            <h3>Log workouts without breaking flow</h3>
+            <p>
+              Start a session fast, pull in a template, compare against
+              previous sets, and move through workouts with less friction.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-meta">02</span>
+            <h3>See strength progress at a glance</h3>
+            <p>
+              Track Strength Index, volume load, top weights, estimated 1RM
+              trends, and muscle-group progress from the same data you log.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-meta">03</span>
+            <h3>Stay consistent for the long run</h3>
+            <p>
+              Use streaks, calendars, badges, and training history to build
+              momentum over time, including rest days and interrupted weeks.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-meta">04</span>
+            <h3>Built for how people really train</h3>
+            <p>
+              Use built-in exercises, add your own, log bodyweight movements,
+              track scale weight, scan machines, and backdate older sessions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="story container reveal delay-2" id="why-vecta">
+        <div class="section-heading">
+          <p>Why Vecta</p>
+          <h2>Everything you need to train with clarity.</h2>
+        </div>
+        <div class="story-grid">
+          <p class="section-intro">
+            Most workout apps help you record sets. Vecta helps you understand
+            your training. From quick workout logging to strength trends,
+            overload tracking, bodyweight logs, and recovery-aware consistency
+            tools, it gives you a clearer picture of what is improving and what
+            needs attention.
+          </p>
+          <div class="pillar-grid">
+            <article class="pillar-card">
+              <span class="pillar-index">01</span>
+              <h3>Fast enough for the gym</h3>
+              <p>
+                Designed for fast, in-session logging with previous-set context,
+                smart defaults, templates, and quick exercise selection.
+              </p>
+            </article>
+            <article class="pillar-card">
+              <span class="pillar-index">02</span>
+              <h3>Focused on strength, not noise</h3>
+              <p>
+                Made for people who care about progression, overload, and
+                measurable improvement instead of bloated tracking.
+              </p>
+            </article>
+            <article class="pillar-card">
+              <span class="pillar-index">03</span>
+              <h3>Motivation through momentum</h3>
+              <p>
+                Turns consistency into something visible with streaks, history,
+                badges, and calendar views.
+              </p>
+            </article>
+            <article class="pillar-card">
+              <span class="pillar-index">04</span>
+              <h3>Flexible and realistic</h3>
+              <p>
+                Supports bodyweight lifts, machine work, custom exercises,
+                backfilled sessions, and off days.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow-section container reveal delay-2" id="how-it-works">
+        <div class="section-heading">
+          <p>From Notes to Progress</p>
+          <h2>From scattered workout notes to clear training progress.</h2>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-card">
+            <span class="flow-label">During the session</span>
+            <h3>Capture the work without breaking flow.</h3>
+            <p>
+              Start fast, jump into a template, compare against previous sets,
+              use the right weight increments, and keep moving between sets.
+            </p>
+            <ul class="flow-list">
+              <li>Start a workout in a tap</li>
+              <li>Prefill sets from previous sessions</li>
+              <li>Use a rest timer while training</li>
+              <li>Scan machines to find likely exercises faster</li>
+            </ul>
+          </article>
+          <article class="flow-card">
+            <span class="flow-label">After the session</span>
+            <h3>Turn logged sets into progress you can actually read.</h3>
+            <p>
+              Vecta removes friction during the workout, then turns the same
+              data into progress signals you can act on later.
+            </p>
+            <ul class="flow-list">
+              <li>Strength Index over time</li>
+              <li>Volume load and top-weight trends</li>
+              <li>Muscle-group progress breakdowns</li>
+              <li>Estimated 1RM and overload tracking</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="social-section container reveal delay-3">
+        <div class="social-card">
+          <div class="social-copy">
+            <p class="social-kicker">Built for serious consistency</p>
+            <h2>
+              Vecta is for people who care about showing up, lifting with
+              intent, and seeing the long game of strength training more
+              clearly.
+            </h2>
+          </div>
+          <div class="proof-badges" aria-label="Vecta strengths">
+            <span class="proof-badge">Templates and workout history</span>
+            <span class="proof-badge">Bodyweight and custom lifts</span>
+            <span class="proof-badge">Backdated sessions and synced accounts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band container reveal delay-3" id="join">
+        <div class="cta-band-inner">
+          <p>Join the Waitlist</p>
+          <h2>Train harder. Track smarter. Stay consistent.</h2>
+          <span>
+            Join Vecta and turn every workout into measurable progress.
+          </span>
+          <a href="../waitlist.html">Join the Waitlist</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer-bar">
+      <section class="container footer-bar-inner">
+        <p>© 2026 Vecta. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Legal links">
+          <a href="../index.html">Compounding</a>
+          <a href="../impressum.html">Impressum</a>
+          <a href="../privacy-policy.html">Privacy Policy</a>
+        </nav>
+      </section>
+    </footer>
+
+    <aside
+      id="cookie-banner"
+      class="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <p>
+        We use cookies to improve your experience. You can accept or decline
+        non-essential cookies. See our
+        <a href="../privacy-policy.html">Privacy Policy</a>.
+      </p>
+      <div class="cookie-actions">
+        <button type="button" id="cookie-decline" class="cookie-btn secondary">
+          Decline
+        </button>
+        <button type="button" id="cookie-accept" class="cookie-btn primary">
+          Accept
+        </button>
+      </div>
+    </aside>
+
+    <script src="../language-switch.js"></script>
+    <script>
+      (function () {
+        const banner = document.getElementById("cookie-banner");
+        const accept = document.getElementById("cookie-accept");
+        const decline = document.getElementById("cookie-decline");
+        const key = "vecta_cookie_consent";
+
+        if (!banner || !accept || !decline) return;
+
+        const saved = localStorage.getItem(key);
+        if (!saved) {
+          banner.classList.add("is-visible");
+        }
+
+        const closeBanner = (value) => {
+          localStorage.setItem(key, value);
+          banner.classList.remove("is-visible");
+        };
+
+        accept.addEventListener("click", () => closeBanner("accepted"));
+        decline.addEventListener("click", () => closeBanner("declined"));
+      })();
+    </script>
+  </body>
+</html>

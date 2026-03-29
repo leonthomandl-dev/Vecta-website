@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vecta | Schnelles Workout-Logging fuer Kraftfortschritt</title>
+    <title>Vecta | Workouts loggen und Fortschritt sehen</title>
     <meta
       name="description"
-      content="Vecta ist eine Krafttrainings-App fuer schnelles Workout-Logging, klaren Fortschrittsueberblick und Konsistenz-Tools, die dir zeigen, ob dein Training wirklich wirkt."
+      content="Weniger Reibung beim Loggen, mehr Klarheit ueber deinen Fortschritt und bessere Trainingskonstanz."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,8 +16,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="test/test.css" />
   </head>
-  <body>
+  <body class="test-page">
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
 
@@ -29,9 +30,8 @@
       </a>
       <nav class="site-nav" aria-label="Hauptnavigation">
         <a href="#progress">Fortschritt</a>
-        <a href="#features">Funktionen</a>
+        <a href="#benefits">Vorteile</a>
         <a href="#why-vecta">Warum Vecta</a>
-        <a href="#join">Warteliste</a>
       </nav>
       <div class="header-controls">
         <div class="lang-toggle" role="group" aria-label="Sprachauswahl">
@@ -43,15 +43,12 @@
     </header>
 
     <main>
-      <section class="hero container">
-        <div class="hero-copy reveal delay-1">
-          <p class="trust-pill">
-            Schnelles Workout-Logging mit echtem Kraftfortschritt
-          </p>
-          <h1>Die Krafttrainings-App, die deinen Fortschritt sichtbar macht.</h1>
+      <section class="test-hero container">
+        <div class="test-hero-copy">
+          <h1>Logge deine Workouts.<br />Sieh deinen Fortschritt.</h1>
           <p class="lead">
-            Vecta hilft dir, Workouts schnell zu loggen, echten Fortschritt zu
-            messen und mit dem Training konsistent zu bleiben, das zaehlt.
+            Weniger Reibung beim Loggen, mehr Klarheit ueber deinen Fortschritt
+            und bessere Trainingskonstanz.
           </p>
           <div class="hero-actions">
             <a class="button button-primary hero-highlight-cta" href="waitlist-de.html">
@@ -60,153 +57,149 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-2" aria-hidden="true">
-          <div class="phone-stack">
-            <article class="phone phone-primary">
-              <div class="screen screen-primary">
-                <img
-                  class="screen-image"
-                  src="IMG_2460.PNG"
-                  alt="Fortschrittsansicht mit Strength-Index-Chart"
-                />
-              </div>
-            </article>
-
-            <article class="phone phone-secondary">
-              <div class="screen screen-secondary">
-                <img
-                  class="screen-image"
-                  src="IMG_2461.PNG"
-                  alt="Startseite mit Kalender und Workout-Starttaste"
-                />
-              </div>
-            </article>
-          </div>
+        <div class="test-stage" aria-hidden="true">
+          <div class="test-stage-band"></div>
+          <div class="test-stage-shadow"></div>
+          <figure class="test-stage-photo-wrap">
+            <img
+              class="test-stage-hand-photo"
+              src="test/hero-hand-with-progress-clean.png"
+              alt=""
+            />
+          </figure>
+          <div class="test-stage-wrist-gradient"></div>
         </div>
       </section>
 
-      <section
-        class="hero-highlights container reveal delay-3"
-        aria-labelledby="hero-highlights-title"
-      >
-        <div class="section-heading hero-highlights-heading">
+      <section class="test-benefits container reveal delay-2" id="benefits">
+        <div class="section-heading test-section-heading">
           <p>Kernvorteile</p>
-          <h2 id="hero-highlights-title">
-            Schnelles Logging, sichtbarer Fortschritt und Konsistenz an einem
-            Ort.
-          </h2>
+          <h2>Schnelles Logging, sichtbarer Fortschritt und Konsistenz an einem Ort.</h2>
         </div>
         <div class="kpi-row">
           <article>
-            <h3>Schnelles Logging im Gym</h3>
+            <h3>Schnelles Logging waehrend des Trainings</h3>
             <p>
-              Starte schnell, nutze Templates und uebernimm deine letzten
-              Arbeitssaetze direkt.
+              Starte ein Workout schnell, nutze Templates erneut und lade deine
+              letzten Arbeitssaetze.
             </p>
           </article>
           <article>
             <h3>Klarer Beweis fuer Fortschritt</h3>
             <p>
-              Verfolge Strength Index, Top Weights, Volumen und 1RM-Trends an
-              einem Ort.
+              Verfolge Strength Index, Top Weights, Volumen und geschaetztes
+              1RM an einem Ort.
             </p>
           </article>
           <article>
-            <h3>Konsistenz, die sich aufbaut</h3>
+            <h3>Konsistenz, die sich auszahlt</h3>
             <p>
-              Bleib im Rhythmus mit Streaks, Kalendern, Badges und voller
-              Workout-Historie.
+              Halte dein Momentum mit Streaks, Kalendern, Badges und deiner
+              kompletten Workout-Historie.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="insights container reveal delay-3" id="progress">
-        <div class="section-heading">
-          <p>Fortschritt sichtbar</p>
-          <h2>Sieh, ob dein Training wirklich funktioniert.</h2>
-        </div>
-
-        <div class="insight-grid">
-          <article class="insight-card chart-card">
-            <header>
-              <h3>Strength Index Verlauf</h3>
-              <p>Geloggte Workouts werden zu klarem Beweis dafuer, dass du staerker wirst.</p>
-            </header>
-            <svg viewBox="0 0 420 180" role="img" aria-label="Strength Index Trenddiagramm">
-              <polyline
-                fill="none"
-                stroke="url(#lineGradient)"
-                stroke-width="6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                points="20,150 75,138 130,128 185,112 240,96 295,88 350,66 400,44"
-              />
-              <defs>
-                <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#17a9ff" />
-                  <stop offset="100%" stop-color="#32d27f" />
-                </linearGradient>
-              </defs>
-            </svg>
+      <section class="test-showcase container reveal delay-3" id="progress">
+        <div class="test-showcase-layout">
+          <article class="test-image-card">
+            <span class="test-image-label">Fortschrittsansicht</span>
+            <article class="phone test-inline-phone">
+              <div class="screen screen-primary">
+                <img
+                  src="IMG_2460.PNG"
+                  alt="Fortschrittsansicht mit Strength-Index-Diagramm"
+                  class="screen-image"
+                />
+              </div>
+            </article>
           </article>
 
-          <article class="insight-card table-card">
-            <header>
-              <h3>Workout-Kontext</h3>
-              <p>Alles, was du brauchst, um den naechsten Satz smarter zu machen.</p>
-            </header>
-            <div class="mini-table">
-              <div><span>Template</span><strong>Upper A</strong></div>
-              <div><span>Vorheriger Satz</span><strong>80 kg x 8</strong></div>
-              <div><span>Rest-Timer</span><strong>01:30</strong></div>
-              <div><span>Maschinenscan</span><strong>Chest Press</strong></div>
+          <div class="test-showcase-copy" id="why-vecta">
+            <div class="section-heading">
+              <p>Warum Vecta</p>
+              <h2>Alles, was du brauchst, um mit Klarheit zu trainieren.</h2>
             </div>
-          </article>
+            <p class="section-intro">
+              Die meisten Workout-Apps helfen dir, Saetze zu speichern. Vecta
+              hilft dir, dein Training zu verstehen. Von schnellem
+              Workout-Logging ueber Krafttrends, Overload-Tracking,
+              Koerpergewichts-Logs und konsistenzorientierte Tools mit Blick auf
+              Regeneration bekommst du ein klareres Bild davon, was besser wird
+              und was mehr Aufmerksamkeit braucht.
+            </p>
 
-          <article class="insight-card split-card">
-            <header>
-              <h3>Konsistenz-Momentum</h3>
-              <p>Fortschritt bleibt motivierend, wenn dein ganzer Trainingsrhythmus sichtbar ist.</p>
-            </header>
-            <div class="split-meter">
-              <span style="--pct: 82">Streak: 8 Wochen mit 3+ Sessions</span>
-              <span style="--pct: 74">Kalender: Rest Days und Sick Days getrackt</span>
-              <span style="--pct: 88">Meilensteine: Badges und Historie an einem Ort</span>
+            <div class="pillar-grid test-pillar-grid">
+              <article class="pillar-card">
+                <span class="pillar-index">01</span>
+                <h3>Schnell genug fuer das Gym</h3>
+                <p>
+                  Entwickelt fuer schnelles Logging waehrend der Session mit
+                  Kontext aus vorherigen Saetzen, smarten Defaults, Templates
+                  und schneller Uebungsauswahl.
+                </p>
+              </article>
+              <article class="pillar-card">
+                <span class="pillar-index">02</span>
+                <h3>Fokus auf Kraft statt Ablenkung</h3>
+                <p>
+                  Gemacht fuer Menschen, die Progression, Overload und messbare
+                  Verbesserung sehen wollen statt ueberladenem Tracking.
+                </p>
+              </article>
+              <article class="pillar-card">
+                <span class="pillar-index">03</span>
+                <h3>Motivation durch Momentum</h3>
+                <p>
+                  Macht Konsistenz sichtbar mit Streaks, Historie, Badges und
+                  Kalenderansichten.
+                </p>
+              </article>
+              <article class="pillar-card">
+                <span class="pillar-index">04</span>
+                <h3>Flexibel und realistisch</h3>
+                <p>
+                  Unterstuetzt Bodyweight-Uebungen, Maschinen, eigene Uebungen,
+                  nachgetragene Sessions und trainingsfreie Tage.
+                </p>
+              </article>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="feature-section container reveal delay-3" id="features">
-        <div class="section-heading">
-          <p>Funktionen</p>
+      <section class="test-details container reveal delay-3">
+        <div class="section-heading test-section-heading">
+          <p>Feature-Bloecke</p>
           <h2>Gebaut fuer echtes Training, nicht nur zum Erfassen von Saetzen.</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
             <span class="feature-meta">01</span>
-            <h3>Workouts loggen, ohne den Flow zu brechen</h3>
+            <h3>Logge Workouts, ohne den Flow zu brechen</h3>
             <p>
-              Starte Sessions schnell, zieh Templates rein, vergleiche mit
+              Starte eine Session schnell, lade ein Template, vergleiche mit
               vorherigen Saetzen und bewege dich mit weniger Reibung durchs
               Workout.
             </p>
           </article>
           <article class="feature-card">
             <span class="feature-meta">02</span>
-            <h3>Kraftfortschritt auf einen Blick sehen</h3>
+            <h3>Sieh Kraftfortschritt auf einen Blick</h3>
             <p>
-              Verfolge Strength Index, Volumen, Top Weights, geschaetzte 1RM
-              Trends und Fortschritt nach Muskelgruppen aus denselben Daten.
+              Verfolge Strength Index, Volumenlast, Top Weights, geschaetzte
+              1RM-Trends und Fortschritt nach Muskelgruppen aus denselben Daten,
+              die du loggst.
             </p>
           </article>
           <article class="feature-card">
             <span class="feature-meta">03</span>
-            <h3>Langfristig konsistent bleiben</h3>
+            <h3>Bleib langfristig konsistent</h3>
             <p>
-              Nutze Streaks, Kalender, Badges und Trainingshistorie, um
-              Momentum ueber Wochen und Monate aufzubauen.
+              Nutze Streaks, Kalender, Badges und Trainingshistorie, um ueber
+              die Zeit Momentum aufzubauen, inklusive Ruhetagen und
+              unterbrochenen Wochen.
             </p>
           </article>
           <article class="feature-card">
@@ -214,126 +207,10 @@
             <h3>Gebaut fuer die Art, wie Menschen wirklich trainieren</h3>
             <p>
               Nutze bestehende Uebungen, fuege eigene hinzu, logge
-              Bodyweight-Movements, tracke Koerpergewicht und trage alte
-              Sessions nach.
+              Bodyweight-Bewegungen, tracke dein Koerpergewicht, scanne
+              Maschinen und trage alte Sessions nach.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section class="story container reveal delay-2" id="why-vecta">
-        <div class="section-heading">
-          <p>Warum Vecta</p>
-          <h2>Alles, was du brauchst, um mit Klarheit zu trainieren.</h2>
-        </div>
-        <div class="story-grid">
-          <p class="section-intro">
-            Die meisten Workout-Apps helfen dir nur dabei, Saetze zu speichern.
-            Vecta hilft dir, dein Training zu verstehen. Von schnellem
-            Workout-Logging ueber Krafttrends, Overload-Tracking und
-            Koerpergewicht bis hin zu Konsistenz-Tools bekommst du ein viel
-            klareres Bild davon, was sich verbessert und was Aufmerksamkeit
-            braucht.
-          </p>
-          <div class="pillar-grid">
-            <article class="pillar-card">
-              <span class="pillar-index">01</span>
-              <h3>Schnell genug fuer das Gym</h3>
-              <p>
-                Entwickelt fuer schnelles Logging waehrend der Session mit
-                Kontext aus vorherigen Saetzen, smarten Defaults und Templates.
-              </p>
-            </article>
-            <article class="pillar-card">
-              <span class="pillar-index">02</span>
-              <h3>Fokus auf Kraft statt Ablenkung</h3>
-              <p>
-                Gemacht fuer Menschen, die Progression, Overload und messbare
-                Verbesserung sehen wollen statt ueberladener Features.
-              </p>
-            </article>
-            <article class="pillar-card">
-              <span class="pillar-index">03</span>
-              <h3>Motivation durch Momentum</h3>
-              <p>
-                Macht Konsistenz sichtbar mit Streaks, Historie, Badges und
-                Kalenderansichten.
-              </p>
-            </article>
-            <article class="pillar-card">
-              <span class="pillar-index">04</span>
-              <h3>Flexibel und realistisch</h3>
-              <p>
-                Unterstuetzt Bodyweight-Uebungen, Maschinen, eigene Uebungen,
-                nachgetragene Sessions und trainingsfreie Tage.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="flow-section container reveal delay-2" id="how-it-works">
-        <div class="section-heading">
-          <p>Von Notizen zu Fortschritt</p>
-          <h2>Von verstreuten Workout-Notizen zu klarem Trainingsfortschritt.</h2>
-        </div>
-        <div class="flow-grid">
-          <article class="flow-card">
-            <span class="flow-label">Waehrend der Session</span>
-            <h3>Erfasse dein Training, ohne den Flow zu verlieren.</h3>
-            <p>
-              Starte schnell, spring in ein Template, vergleiche mit vorherigen
-              Saetzen, nutze passende Gewichtsschritte und bleib in Bewegung.
-            </p>
-            <ul class="flow-list">
-              <li>Workout mit einem Tap starten</li>
-              <li>Saetze aus frueheren Sessions uebernehmen</li>
-              <li>Rest-Timer direkt beim Training nutzen</li>
-              <li>Maschinen scannen, um Uebungen schneller zu finden</li>
-            </ul>
-          </article>
-          <article class="flow-card">
-            <span class="flow-label">Nach dem Workout</span>
-            <h3>Mach aus geloggten Saetzen Fortschritt, den du lesen kannst.</h3>
-            <p>
-              Vecta reduziert Reibung im Gym und verwandelt dieselben Daten
-              spaeter in Signale, mit denen du dein Training steuern kannst.
-            </p>
-            <ul class="flow-list">
-              <li>Strength Index im Zeitverlauf</li>
-              <li>Volumen- und Top-Weight-Trends</li>
-              <li>Fortschritt nach Muskelgruppen</li>
-              <li>Geschaetzte 1RM- und Overload-Entwicklung</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="social-section container reveal delay-3">
-        <div class="social-card">
-          <div class="social-copy">
-            <p class="social-kicker">Gebaut fuer echte Konsistenz</p>
-            <h2>
-              Vecta ist fuer Menschen, die auftauchen, mit Absicht trainieren
-              und die lange Linie ihres Krafttrainings klarer sehen wollen.
-            </h2>
-          </div>
-          <div class="proof-badges" aria-label="Vecta Staerken">
-            <span class="proof-badge">Templates und Workout-Historie</span>
-            <span class="proof-badge">Bodyweight und eigene Uebungen</span>
-            <span class="proof-badge">Nachgetragene Sessions und Sync</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-band container reveal delay-3" id="join">
-        <div class="cta-band-inner">
-          <p>Warteliste</p>
-          <h2>Trainiere haerter. Tracke smarter. Bleib konsistent.</h2>
-          <span>
-            Komm zu Vecta und mach aus jedem Workout messbaren Fortschritt.
-          </span>
-          <a href="waitlist-de.html">Zur Warteliste</a>
         </div>
       </section>
     </main>

@@ -9,6 +9,7 @@
       content="Less friction while logging, more clarity on your progress, and better training consistency."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="theme-switch.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,10 +35,27 @@
         <a href="#why-vecta">Why Vecta</a>
       </nav>
       <div class="header-controls">
-        <div class="lang-toggle" role="group" aria-label="Language switcher">
-          <a href="index.html" aria-current="page">EN</a>
-          <a href="index-de.html">DE</a>
+        <div class="lang-toggle">
+          <select class="lang-select" aria-label="Language" title="Language">
+            <option value="index.html" selected>English</option>
+            <option value="index-de.html">Deutsch</option>
+          </select>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          data-theme-toggle
+          data-light-label="Light"
+          data-dark-label="Dark"
+          data-aria-light="Switch to light mode"
+          data-aria-dark="Switch to dark mode"
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
+        </button>
         <a class="header-cta" href="waitlist.html">Get Early Access</a>
       </div>
     </header>

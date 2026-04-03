@@ -9,6 +9,7 @@
       content="Trag dich mit Name und E-Mail in die Vecta-Warteliste ein."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="theme-switch.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +30,30 @@
               <img src="logo.svg" alt="" class="brand-logo" />
             </span>
           </a>
-          <a class="back-link" href="index-de.html">Zur Startseite</a>
+          <div class="waitlist-header-controls">
+            <div class="lang-toggle">
+              <select class="lang-select" aria-label="Sprache" title="Sprache">
+                <option value="waitlist.html">English</option>
+                <option value="waitlist-de.html" selected>Deutsch</option>
+              </select>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-pressed="false"
+              data-theme-toggle
+              data-light-label="Hell"
+              data-dark-label="Dunkel"
+              data-aria-light="Zum hellen Modus wechseln"
+              data-aria-dark="Zum dunklen Modus wechseln"
+            >
+              <span class="theme-toggle-track" aria-hidden="true">
+                <span class="theme-toggle-thumb"></span>
+              </span>
+              <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
+            </button>
+            <a class="back-link" href="index-de.html">Zur Startseite</a>
+          </div>
         </header>
         <div class="waitlist-only-layout">
           <section class="waitlist-only-content">
@@ -84,13 +108,20 @@
 
           <aside class="waitlist-phone-wrap" aria-hidden="true">
             <div class="waitlist-phone">
-              <img src="screen-home.png" alt="" />
+              <img
+                src="screen-home.png"
+                alt=""
+                data-theme-image
+                data-light-src="screen-home.png"
+                data-dark-src="screen-home-dark.svg"
+              />
             </div>
           </aside>
         </div>
       </article>
     </main>
 
+    <script src="language-switch.js"></script>
     <script>
       (function () {
         const form = document.getElementById("waitlist-form");

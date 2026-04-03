@@ -93,20 +93,9 @@
     }
   }
 
-  document.querySelectorAll(".lang-toggle a[href]").forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      if (
-        event.defaultPrevented ||
-        event.button !== 0 ||
-        event.metaKey ||
-        event.ctrlKey ||
-        event.shiftKey ||
-        event.altKey
-      ) {
-        return;
-      }
-
-      const targetUrl = new URL(link.href, window.location.href);
+  document.querySelectorAll(".lang-select").forEach(function (select) {
+    select.addEventListener("change", function () {
+      const targetUrl = new URL(select.value, window.location.href);
 
       if (targetUrl.pathname === window.location.pathname) {
         return;
@@ -126,6 +115,8 @@
       } catch (_error) {
         // Ignore storage failures and fall back to the browser default navigation.
       }
+
+      window.location.assign(targetUrl.href);
     });
   });
 })();

@@ -1,0 +1,207 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1170"
+  height="2532"
+  viewBox="0 0 1170 2532"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Home dashboard screen</title>
+  <desc id="desc">
+    Dark Vecta home screen with a calendar card, workout start button, last
+    session card, and bottom navigation.
+  </desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070d16" />
+      <stop offset="55%" stop-color="#050912" />
+      <stop offset="100%" stop-color="#04070f" />
+    </linearGradient>
+    <radialGradient id="topGlow" cx="18%" cy="12%" r="46%">
+      <stop offset="0%" stop-color="#142334" stop-opacity="0.58" />
+      <stop offset="100%" stop-color="#142334" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="52%" cy="46%" r="38%">
+      <stop offset="0%" stop-color="#0a1521" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0a1521" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1d21" />
+      <stop offset="100%" stop-color="#17171a" />
+    </linearGradient>
+    <linearGradient id="nav" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c2b31" />
+      <stop offset="100%" stop-color="#242329" />
+    </linearGradient>
+    <style>
+      .ui {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      .white {
+        fill: #f7f8fa;
+      }
+
+      .soft {
+        fill: #b7bcc6;
+      }
+
+      .muted {
+        fill: #838891;
+      }
+
+      .green {
+        fill: #38d867;
+      }
+
+      .line {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <rect width="1170" height="2532" fill="url(#bg)" />
+  <rect width="1170" height="2532" fill="url(#topGlow)" />
+  <rect width="1170" height="2532" fill="url(#centerGlow)" />
+
+  <g class="ui">
+    <text class="white" x="84" y="108" font-size="52" font-weight="650">18:00</text>
+
+    <g transform="translate(858 68)" fill="#f7f8fa">
+      <rect x="0" y="24" width="12" height="20" rx="4" opacity="0.72" />
+      <rect x="20" y="16" width="12" height="28" rx="4" opacity="0.8" />
+      <rect x="40" y="8" width="12" height="36" rx="4" opacity="0.9" />
+      <rect x="60" y="0" width="12" height="44" rx="4" />
+    </g>
+
+    <g transform="translate(955 66)" fill="none" stroke="#f7f8fa" stroke-width="8" stroke-linecap="round">
+      <path d="M0 35c18-20 50-20 68 0" opacity="0.72" />
+      <path d="M11 35c12-12 34-12 46 0" opacity="0.86" />
+      <circle cx="34" cy="35" r="5" fill="#f7f8fa" stroke="none" />
+    </g>
+
+    <g transform="translate(1033 60)">
+      <rect x="0" y="0" width="76" height="40" rx="20" fill="none" stroke="#f7f8fa" stroke-width="6" />
+      <rect x="64" y="11" width="10" height="18" rx="5" fill="#f7f8fa" />
+      <rect x="8" y="8" width="52" height="24" rx="12" fill="#59ef82" />
+      <path d="M18 20l11-11 7 14 10-11" fill="none" stroke="#073514" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <text class="white" x="66" y="240" font-size="68" font-weight="340" letter-spacing="4">vecta</text>
+
+    <g transform="translate(860 170)">
+      <text x="0" y="0" font-size="52">🔥</text>
+      <text class="white" x="76" y="0" font-size="42" font-weight="650">1</text>
+      <g transform="translate(132 -44)">
+        <rect x="0" y="0" width="92" height="92" rx="24" fill="#1d1c22" opacity="0.95" />
+        <circle cx="46" cy="34" r="13" fill="none" stroke="#d6d9df" stroke-width="4.5" />
+        <path d="M23 66c7-13 39-13 46 0" fill="none" stroke="#d6d9df" stroke-width="4.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <g transform="translate(46 308)">
+      <rect x="0" y="0" width="1038" height="300" rx="34" fill="url(#card)" stroke="#2a2b31" stroke-width="4" />
+      <text class="white" x="40" y="78" font-size="52" font-weight="640">March 2026</text>
+      <text class="muted" x="430" y="78" font-size="34" font-weight="540">23 workouts this month</text>
+
+      <g font-size="30" font-weight="570" class="muted">
+        <text x="54" y="140">Mon</text>
+        <text x="202" y="140">Tue</text>
+        <text x="350" y="140">Wed</text>
+        <text x="498" y="140">Thu</text>
+        <text x="646" y="140">Fri</text>
+        <text x="794" y="140">Sat</text>
+        <text x="944" y="140">Sun</text>
+      </g>
+
+      <g class="white" font-size="56" font-weight="650">
+        <text x="64" y="224">16</text>
+        <text x="212" y="224">17</text>
+        <text x="360" y="224">18</text>
+        <text x="508" y="224">19</text>
+        <text x="656" y="224">20</text>
+        <text x="954" y="224">22</text>
+      </g>
+
+      <g transform="translate(760 150)">
+        <rect x="0" y="0" width="146" height="114" rx="26" fill="none" stroke="#f2f3f5" stroke-width="6" />
+        <text class="white" x="38" y="74" font-size="56" font-weight="700">21</text>
+      </g>
+
+      <g fill="#42df6c">
+        <circle cx="88" cy="262" r="7" />
+        <circle cx="536" cy="262" r="7" />
+        <circle cx="832" cy="262" r="7" />
+      </g>
+    </g>
+
+    <g transform="translate(250 900)">
+      <path
+        class="line"
+        d="M170 0c-146 0-252 114-252 276 0 141 79 234 179 271"
+        stroke="#4a4b54"
+        stroke-width="15"
+        opacity="0.95"
+      />
+      <path
+        class="line"
+        d="M341 81c48 49 77 116 77 195 0 105-52 190-129 239"
+        stroke="#4a4b54"
+        stroke-width="15"
+        opacity="0.9"
+      />
+      <circle cx="170" cy="274" r="100" fill="#fbfbfc" />
+      <path d="M170 228v92M124 274h92" stroke="#131418" stroke-width="12" stroke-linecap="round" />
+      <text class="soft" x="170" y="436" text-anchor="middle" font-size="54" font-weight="500">Start workout</text>
+    </g>
+
+    <g transform="translate(46 1920)">
+      <rect x="0" y="0" width="1048" height="184" rx="28" fill="url(#card)" stroke="#26272e" stroke-width="4" />
+      <text class="muted" x="42" y="58" font-size="34" font-weight="560">Last session</text>
+      <text class="soft" x="922" y="58" font-size="34" font-weight="560">Today</text>
+      <circle cx="58" cy="118" r="10" fill="#33a5ff" />
+      <text class="white" x="84" y="128" font-size="42" font-weight="570">Back</text>
+    </g>
+
+    <g transform="translate(70 2246)">
+      <rect x="0" y="0" width="842" height="176" rx="88" fill="url(#nav)" stroke="#393840" stroke-width="4" />
+
+      <g transform="translate(100 46)">
+        <path d="M18 44V24l26-19 26 19v20h-18V30H36v14Z" fill="#f7f8fa" />
+        <text x="44" y="88" text-anchor="middle" class="white" font-size="32" font-weight="620">Home</text>
+      </g>
+
+      <g transform="translate(288 46)" fill="#a5abb4">
+        <rect x="0" y="20" width="15" height="24" rx="4" opacity="0.82" />
+        <rect x="24" y="10" width="15" height="34" rx="4" opacity="0.9" />
+        <rect x="48" y="0" width="15" height="44" rx="4" />
+        <rect x="72" y="14" width="15" height="30" rx="4" opacity="0.76" />
+        <text x="44" y="88" text-anchor="middle" class="soft" font-size="32" font-weight="560">Progress</text>
+      </g>
+
+      <g transform="translate(488 46)" fill="#a5abb4">
+        <rect x="3" y="6" width="82" height="58" rx="10" fill="none" stroke="#a5abb4" stroke-width="5" />
+        <line x1="3" y1="24" x2="85" y2="24" stroke="#a5abb4" stroke-width="5" />
+        <line x1="22" y1="6" x2="22" y2="24" stroke="#a5abb4" stroke-width="5" />
+        <line x1="66" y1="6" x2="66" y2="24" stroke="#a5abb4" stroke-width="5" />
+        <text x="44" y="88" text-anchor="middle" class="soft" font-size="32" font-weight="560">Habit</text>
+      </g>
+
+      <g transform="translate(688 46)" fill="none" stroke="#a5abb4" stroke-width="7">
+        <circle cx="44" cy="32" r="20" />
+        <path d="M44 0v12M44 52v12M12 32H0M88 32H76M18 10l9 9M70 54l9 9M18 54l9-9M70 10l9-9" stroke-linecap="round" />
+        <text x="44" y="88" text-anchor="middle" fill="#b7bcc6" font-size="32" font-weight="560" stroke="none">Settings</text>
+      </g>
+    </g>
+
+    <g transform="translate(922 2240)">
+      <circle cx="112" cy="90" r="84" fill="#fcfcfd" />
+      <path d="M112 48v84M70 90h84" stroke="#111214" stroke-width="12" stroke-linecap="round" />
+    </g>
+
+    <rect x="388" y="2466" width="392" height="14" rx="7" fill="#f2f4f6" opacity="0.95" />
+  </g>
+</svg>

@@ -9,6 +9,7 @@
       content="Privacy Policy and data processing information for Vecta."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="theme-switch.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,10 +26,27 @@
         </span>
       </a>
       <div class="legal-header-controls">
-        <div class="lang-toggle" role="group" aria-label="Language switcher">
-          <a href="privacy-policy.html" aria-current="page">EN</a>
-          <a href="privacy-policy-de.html">DE</a>
+        <div class="lang-toggle">
+          <select class="lang-select" aria-label="Language" title="Language">
+            <option value="privacy-policy.html" selected>English</option>
+            <option value="privacy-policy-de.html">Deutsch</option>
+          </select>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          data-theme-toggle
+          data-light-label="Light"
+          data-dark-label="Dark"
+          data-aria-light="Switch to light mode"
+          data-aria-dark="Switch to dark mode"
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
+        </button>
         <a class="back-link" href="index.html">Back to Home</a>
       </div>
     </header>

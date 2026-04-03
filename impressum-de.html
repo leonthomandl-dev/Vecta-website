@@ -9,6 +9,7 @@
       content="Impressum und rechtliche Informationen von Vecta."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="theme-switch.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,10 +26,27 @@
         </span>
       </a>
       <div class="legal-header-controls">
-        <div class="lang-toggle" role="group" aria-label="Sprachauswahl">
-          <a href="impressum.html">EN</a>
-          <a href="impressum-de.html" aria-current="page">DE</a>
+        <div class="lang-toggle">
+          <select class="lang-select" aria-label="Sprache" title="Sprache">
+            <option value="impressum.html">English</option>
+            <option value="impressum-de.html" selected>Deutsch</option>
+          </select>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          data-theme-toggle
+          data-light-label="Hell"
+          data-dark-label="Dunkel"
+          data-aria-light="Zum hellen Modus wechseln"
+          data-aria-dark="Zum dunklen Modus wechseln"
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
+        </button>
         <a class="back-link" href="index-de.html">Zur Startseite</a>
       </div>
     </header>

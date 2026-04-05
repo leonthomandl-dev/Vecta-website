@@ -31,8 +31,8 @@
       </a>
       <nav class="site-nav" aria-label="Hauptnavigation">
         <a href="#progress">Fortschritt</a>
-        <a href="#benefits">Vorteile</a>
         <a href="#why-vecta">Warum Vecta</a>
+        <a href="#features">Funktionen</a>
       </nav>
       <div class="header-controls">
         <div class="lang-toggle">
@@ -89,33 +89,127 @@
         </div>
       </section>
 
-      <section class="test-benefits container reveal delay-2" id="benefits">
-        <div class="section-heading test-section-heading">
-          <p>Kernvorteile</p>
-          <h2>Schnelles Logging, sichtbarer Fortschritt und Konsistenz an einem Ort.</h2>
-        </div>
-        <div class="kpi-row">
-          <article>
-            <h3>Schnelles Logging waehrend des Trainings</h3>
-            <p>
-              Starte ein Workout schnell, nutze Templates erneut und lade deine
-              letzten Arbeitssaetze.
-            </p>
-          </article>
-          <article>
-            <h3>Klarer Beweis fuer Fortschritt</h3>
-            <p>
-              Verfolge Strength Index, Top Weights, Volumen und geschaetztes
-              1RM an einem Ort.
-            </p>
-          </article>
-          <article>
-            <h3>Konsistenz, die sich auszahlt</h3>
-            <p>
-              Halte dein Momentum mit Streaks, Kalendern, Badges und deiner
-              kompletten Workout-Historie.
-            </p>
-          </article>
+      <section class="test-benefits container reveal delay-2" id="why-vecta">
+        <div class="why-vecta-layout">
+          <div class="why-vecta-copy">
+            <div class="section-heading test-section-heading">
+              <p>Warum Vecta</p>
+              <h2>Von Liftern, fuer Lifter.</h2>
+            </div>
+            <div
+              class="why-vecta-feature-list"
+              role="radiogroup"
+              aria-label="Warum Vecta Funktionen"
+            >
+              <div class="why-vecta-feature-option">
+                <input
+                  class="why-vecta-feature-input"
+                  type="radio"
+                  name="why-vecta-feature"
+                  id="why-vecta-feature-progress"
+                  data-screen-src="why-vecta-progress.jpeg"
+                  checked
+                />
+                <label class="why-vecta-feature-box" for="why-vecta-feature-progress">
+                  <span class="why-vecta-feature-title">Klarer Fortschritt</span>
+                  <span class="why-vecta-feature-body">
+                    Sieh Krafttrends, Top Weights und geschaetztes 1RM an einem
+                    Ort, damit Fortschritt leicht zu erkennen ist.
+                  </span>
+                </label>
+              </div>
+              <div class="why-vecta-feature-option">
+                <input
+                  class="why-vecta-feature-input"
+                  type="radio"
+                  name="why-vecta-feature"
+                  id="why-vecta-feature-logging"
+                  data-screen-src="why-vecta-logging.jpeg"
+                />
+                <label class="why-vecta-feature-box" for="why-vecta-feature-logging">
+                  <span class="why-vecta-feature-title">Schnelles Logging</span>
+                  <span class="why-vecta-feature-body">
+                    Starte schnell, nutze Templates erneut und gehe durch deine
+                    Sessions, ohne dein Workout auszubremsen.
+                  </span>
+                </label>
+              </div>
+              <div class="why-vecta-feature-option">
+                <input
+                  class="why-vecta-feature-input"
+                  type="radio"
+                  name="why-vecta-feature"
+                  id="why-vecta-feature-templates"
+                  data-screen-src="why-vecta-templates.jpeg"
+                />
+                <label class="why-vecta-feature-box" for="why-vecta-feature-templates">
+                  <span class="why-vecta-feature-title">
+                    Eigene Templates und Uebungen
+                  </span>
+                  <span class="why-vecta-feature-body">
+                    Baue dir dein eigenes Trainingssetup mit wiederverwendbaren
+                    Templates, eigenen Uebungen und einem Ablauf, der zu deinem
+                    Training passt.
+                  </span>
+                </label>
+              </div>
+              <div class="why-vecta-feature-option">
+                <input
+                  class="why-vecta-feature-input"
+                  type="radio"
+                  name="why-vecta-feature"
+                  id="why-vecta-feature-data"
+                  data-screen-src="why-vecta-calendar.jpeg"
+                />
+                <label class="why-vecta-feature-box" for="why-vecta-feature-data">
+                  <span class="why-vecta-feature-title">
+                    Nuetzliche Daten hinter jedem Workout
+                  </span>
+                  <span class="why-vecta-feature-body">
+                    Jede Session speist Kennzahlen wie Volumen, Strength Index
+                    und Trainingshistorie, die du wirklich nutzen kannst.
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-vecta-device">
+            <div class="why-vecta-device-shell">
+              <img
+                src="why-vecta-progress.jpeg"
+                alt=""
+                class="why-vecta-device-screen"
+              />
+              <img
+                src="iphone-15-frame-tight.png"
+                alt=""
+                class="why-vecta-device-frame"
+              />
+            </div>
+            <div class="why-vecta-indicators">
+              <button
+                class="why-vecta-indicator is-active"
+                type="button"
+                aria-label="Klaren-Fortschritt-Screen zeigen"
+              ></button>
+              <button
+                class="why-vecta-indicator"
+                type="button"
+                aria-label="Schnelles-Logging-Screen zeigen"
+              ></button>
+              <button
+                class="why-vecta-indicator"
+                type="button"
+                aria-label="Templates-und-Uebungen-Screen zeigen"
+              ></button>
+              <button
+                class="why-vecta-indicator"
+                type="button"
+                aria-label="Nuetzliche-Daten-Screen zeigen"
+              ></button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -134,18 +228,15 @@
             </article>
           </article>
 
-          <div class="test-showcase-copy" id="why-vecta">
+          <div class="test-showcase-copy">
             <div class="section-heading">
-              <p>Warum Vecta</p>
+              <p>Fuer echtes Training</p>
               <h2>Alles, was du brauchst, um mit Klarheit zu trainieren.</h2>
             </div>
             <p class="section-intro">
-              Die meisten Workout-Apps helfen dir, Saetze zu speichern. Vecta
-              hilft dir, dein Training zu verstehen. Von schnellem
-              Workout-Logging ueber Krafttrends, Overload-Tracking,
-              Koerpergewichts-Logs und konsistenzorientierte Tools mit Blick auf
-              Regeneration bekommst du ein klareres Bild davon, was besser wird
-              und was mehr Aufmerksamkeit braucht.
+              Entwickelt fuer schnelles Logging waehrend der Session, echte
+              Progression und die Flexibilitaet, die Lifter wirklich brauchen,
+              ohne den Ballast, der viele Workout-Apps langsam macht.
             </p>
 
             <div class="pillar-grid test-pillar-grid">
@@ -187,7 +278,7 @@
         </div>
       </section>
 
-      <section class="test-details container reveal delay-3">
+      <section class="test-details container reveal delay-3" id="features">
         <div class="section-heading test-section-heading">
           <p>Feature-Bloecke</p>
           <h2>Gebaut fuer echtes Training, nicht nur zum Erfassen von Saetzen.</h2>
@@ -266,6 +357,7 @@
     </aside>
 
     <script src="language-switch.js"></script>
+    <script src="why-vecta-rotator.js"></script>
     <script>
       (function () {
         const banner = document.getElementById("cookie-banner");

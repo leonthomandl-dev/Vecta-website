@@ -747,6 +747,295 @@ section[id] {
   line-height: 1.65;
 }
 
+.why-vecta-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 28rem);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+}
+
+.why-vecta-copy {
+  display: grid;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+.why-vecta-copy .section-heading {
+  width: 100%;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
+
+.why-vecta-copy .section-heading p {
+  width: auto;
+  text-align: left;
+}
+
+.why-vecta-copy .section-heading h2 {
+  margin-left: 0;
+  text-align: left;
+}
+
+.why-vecta-feature-list {
+  margin-top: 2.75rem;
+  display: grid;
+  gap: 1rem;
+  width: min(36.5rem, 100%);
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+.why-vecta-feature-option {
+  position: relative;
+}
+
+.why-vecta-feature-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.why-vecta-feature-box {
+  min-height: 7.2rem;
+  border-radius: 1.9rem;
+  border: 1px solid rgba(190, 196, 207, 0.68);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 249, 252, 0.9));
+  box-shadow:
+    0 16px 36px rgba(20, 32, 49, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+  padding: 1.05rem 1.35rem;
+  display: grid;
+  align-content: start;
+  gap: 0.48rem;
+  cursor: pointer;
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.why-vecta-feature-title {
+  margin: 0;
+  color: #0f141c;
+  font-size: 1.24rem;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.why-vecta-feature-body {
+  margin: 0;
+  color: #495365;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.why-vecta-feature-option:nth-child(2) .why-vecta-feature-box,
+.why-vecta-feature-option:nth-child(3) .why-vecta-feature-box {
+  min-height: 8rem;
+}
+
+.why-vecta-feature-option:nth-child(4) .why-vecta-feature-box {
+  min-height: 8.3rem;
+}
+
+.why-vecta-feature-box:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 20px 38px rgba(20, 32, 49, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.why-vecta-feature-input:checked + .why-vecta-feature-box {
+  border-color: rgba(18, 22, 29, 0.72);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(244, 247, 252, 0.96));
+  box-shadow:
+    0 22px 42px rgba(20, 32, 49, 0.12),
+    0 0 0 1px rgba(18, 22, 29, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  transform: translateY(-1px);
+}
+
+.why-vecta-feature-input:focus-visible + .why-vecta-feature-box {
+  box-shadow:
+    0 0 0 4px rgba(27, 159, 255, 0.16),
+    0 18px 36px rgba(20, 32, 49, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+:root[data-theme="dark"] .why-vecta-feature-box {
+  border-color: rgba(143, 161, 183, 0.2);
+  background:
+    linear-gradient(180deg, rgba(17, 25, 37, 0.94), rgba(12, 19, 29, 0.9));
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .why-vecta-feature-title {
+  color: #f3f7fd;
+}
+
+:root[data-theme="dark"] .why-vecta-feature-body {
+  color: #a9b7c9;
+}
+
+:root[data-theme="dark"] .why-vecta-feature-box:hover {
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+:root[data-theme="dark"] .why-vecta-feature-input:checked + .why-vecta-feature-box {
+  border-color: rgba(233, 240, 250, 0.22);
+  background:
+    linear-gradient(180deg, rgba(24, 34, 49, 0.98), rgba(15, 24, 36, 0.94));
+  box-shadow:
+    0 24px 44px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(233, 240, 250, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .why-vecta-feature-input:focus-visible + .why-vecta-feature-box {
+  box-shadow:
+    0 0 0 4px rgba(27, 159, 255, 0.18),
+    0 20px 38px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.why-vecta-device {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 49rem;
+}
+
+.why-vecta-device::before {
+  content: "";
+  position: absolute;
+  inset: 15% 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(246, 241, 218, 0.9) 0%, rgba(246, 241, 218, 0.3) 42%, rgba(246, 241, 218, 0) 72%);
+  filter: blur(18px);
+}
+
+.why-vecta-device-shell {
+  position: relative;
+  width: min(22.8rem, 100%);
+  aspect-ratio: 0.4867;
+  z-index: 1;
+}
+
+.why-vecta-device-screen {
+  position: absolute;
+  inset: 2.15% 2.45% 2.25%;
+  width: calc(100% - 4.9%);
+  height: calc(100% - 4.4%);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 3.35rem;
+  box-shadow: 0 28px 54px rgba(15, 20, 29, 0.16);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.why-vecta-device-screen.is-switching {
+  opacity: 0.72;
+  transform: scale(0.992);
+}
+
+.why-vecta-device-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transform: none;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+}
+
+.why-vecta-indicators {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.why-vecta-indicator {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(178, 184, 194, 0.72);
+  overflow: hidden;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition:
+    width 0.22s ease,
+    background-color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.why-vecta-indicator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #101419;
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+}
+
+.why-vecta-indicator.is-active {
+  width: 2.15rem;
+  background: rgba(178, 184, 194, 0.72);
+  box-shadow: 0 10px 18px rgba(16, 20, 25, 0.14);
+}
+
+.why-vecta-indicator:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(27, 159, 255, 0.16),
+    0 10px 18px rgba(16, 20, 25, 0.12);
+}
+
+.why-vecta-indicator.is-active::before {
+  opacity: 1;
+}
+
+.why-vecta-indicator.is-active.is-progressing::before {
+  animation: why-vecta-indicator-fill var(--why-vecta-indicator-duration, 5000ms) linear forwards;
+}
+
+@keyframes why-vecta-indicator-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
 .hero-highlights {
   margin-top: 5.6rem;
 }
@@ -1892,6 +2181,22 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
+  .why-vecta-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .why-vecta-feature-list {
+    padding-left: 0;
+  }
+
+  .why-vecta-copy .section-heading {
+    margin-left: 0;
+  }
+
+  .why-vecta-device {
+    min-height: 40rem;
+  }
+
   .benefits-grid {
     grid-template-columns: 1fr;
   }
@@ -1974,6 +2279,58 @@ section[id] {
   .kpi-row {
     grid-template-columns: 1fr;
     margin-top: 1.4rem;
+  }
+
+  .why-vecta-feature-list {
+    gap: 0.85rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .why-vecta-feature-box {
+    min-height: 6.7rem;
+    border-radius: 1.4rem;
+    padding: 0.95rem 0.95rem;
+  }
+
+  .why-vecta-feature-option:nth-child(2) .why-vecta-feature-box,
+  .why-vecta-feature-option:nth-child(3) .why-vecta-feature-box {
+    min-height: 7.4rem;
+  }
+
+  .why-vecta-feature-option:nth-child(4) .why-vecta-feature-box {
+    min-height: 7.8rem;
+  }
+
+  .why-vecta-feature-title {
+    font-size: 1rem;
+  }
+
+  .why-vecta-feature-body {
+    font-size: 0.9rem;
+  }
+
+  .why-vecta-device {
+    min-height: 31rem;
+  }
+
+  .why-vecta-device-shell {
+    width: min(17.4rem, 84vw);
+  }
+
+  .why-vecta-indicators {
+    margin-top: 0.95rem;
+    gap: 0.68rem;
+  }
+
+  .why-vecta-indicator {
+    width: 0.88rem;
+    height: 0.88rem;
+  }
+
+  .why-vecta-indicator.is-active {
+    width: 1.85rem;
   }
 
   .kpi-row article {

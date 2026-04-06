@@ -1752,7 +1752,7 @@ section[id] {
 }
 
 .vision-figure {
-  width: min(1480px, calc(100vw - 4rem));
+  width: min(1360px, calc(100vw - 6rem));
   margin: 0 0 0 50%;
   transform: translateX(-50%);
 }
@@ -2562,7 +2562,7 @@ section[id] {
   }
 
   .vision-figure {
-    width: calc(100vw - 1.6rem);
+    width: calc(100vw - 2.8rem);
   }
 
   .vision-heading {

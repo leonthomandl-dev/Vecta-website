@@ -19,35 +19,41 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="legal-page">
-    <header class="legal-header container">
-      <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="logo.svg" alt="" class="brand-logo" />
-        </span>
-      </a>
-      <div class="legal-header-controls">
-        <div class="lang-toggle">
-          <select class="lang-select" aria-label="Language" title="Language">
-            <option value="privacy-policy.html" selected>English</option>
-            <option value="privacy-policy-de.html">Deutsch</option>
-          </select>
-        </div>
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-pressed="false"
-          data-theme-toggle
-          data-light-label="Light"
-          data-dark-label="Dark"
-          data-aria-light="Switch to light mode"
-          data-aria-dark="Switch to dark mode"
-        >
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb"></span>
+    <header class="site-header-shell">
+      <div class="site-header container">
+        <a class="brand" href="index.html" aria-label="Vecta home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.svg" alt="" class="brand-logo" />
           </span>
-          <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
-        </button>
-        <a class="back-link" href="index.html">Back to Home</a>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html#why-vecta">Why Vecta</a>
+          <a href="index.html#vision">Vision</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-toggle">
+            <select class="lang-select" aria-label="Language" title="Language">
+              <option value="privacy-policy.html" selected>English</option>
+              <option value="privacy-policy-de.html">Deutsch</option>
+            </select>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-theme-toggle
+            data-light-label="Light"
+            data-dark-label="Dark"
+            data-aria-light="Switch to light mode"
+            data-aria-dark="Switch to dark mode"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
+          </button>
+          <a class="header-cta" href="waitlist.html">Get Early Access</a>
+        </div>
       </div>
     </header>
 

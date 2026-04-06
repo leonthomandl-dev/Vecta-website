@@ -22,39 +22,46 @@
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
 
+    <header class="site-header-shell">
+      <div class="site-header container">
+        <a class="brand" href="index.html" aria-label="Vecta home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.svg" alt="" class="brand-logo" />
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html#why-vecta">Why Vecta</a>
+          <a href="index.html#vision">Vision</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-toggle">
+            <select class="lang-select" aria-label="Language" title="Language">
+              <option value="waitlist.html" selected>English</option>
+              <option value="waitlist-de.html">Deutsch</option>
+            </select>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-theme-toggle
+            data-light-label="Light"
+            data-dark-label="Dark"
+            data-aria-light="Switch to light mode"
+            data-aria-dark="Switch to dark mode"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
+          </button>
+          <a class="header-cta" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </header>
+
     <main class="waitlist-page container reveal">
       <article class="waitlist-only-card">
-        <header class="waitlist-page-top">
-          <a class="brand" href="index.html" aria-label="Vecta home">
-            <span class="brand-mark" aria-hidden="true">
-              <img src="logo.svg" alt="" class="brand-logo" />
-            </span>
-          </a>
-          <div class="waitlist-header-controls">
-            <div class="lang-toggle">
-              <select class="lang-select" aria-label="Language" title="Language">
-                <option value="waitlist.html" selected>English</option>
-                <option value="waitlist-de.html">Deutsch</option>
-              </select>
-            </div>
-            <button
-              class="theme-toggle"
-              type="button"
-              aria-pressed="false"
-              data-theme-toggle
-              data-light-label="Light"
-              data-dark-label="Dark"
-              data-aria-light="Switch to light mode"
-              data-aria-dark="Switch to dark mode"
-            >
-              <span class="theme-toggle-track" aria-hidden="true">
-                <span class="theme-toggle-thumb"></span>
-              </span>
-              <span class="theme-toggle-text" data-theme-toggle-label>Light</span>
-            </button>
-            <a class="back-link" href="index.html">Back to Home</a>
-          </div>
-        </header>
         <div class="waitlist-only-layout">
           <section class="waitlist-only-content">
             <p class="waitlist-kicker">Early Access</p>

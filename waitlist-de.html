@@ -22,39 +22,47 @@
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
 
+    <header class="site-header-shell">
+      <div class="site-header container">
+        <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.svg" alt="" class="brand-logo" />
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="index-de.html#progress">Fortschritt</a>
+          <a href="index-de.html#why-vecta">Warum Vecta</a>
+          <a href="index-de.html#vision">Vision</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-toggle">
+            <select class="lang-select" aria-label="Sprache" title="Sprache">
+              <option value="waitlist.html">English</option>
+              <option value="waitlist-de.html" selected>Deutsch</option>
+            </select>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-theme-toggle
+            data-light-label="Hell"
+            data-dark-label="Dunkel"
+            data-aria-light="Zum hellen Modus wechseln"
+            data-aria-dark="Zum dunklen Modus wechseln"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
+          </button>
+          <a class="header-cta" href="index-de.html">Zur Startseite</a>
+        </div>
+      </div>
+    </header>
+
     <main class="waitlist-page container reveal">
       <article class="waitlist-only-card">
-        <header class="waitlist-page-top">
-          <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
-            <span class="brand-mark" aria-hidden="true">
-              <img src="logo.svg" alt="" class="brand-logo" />
-            </span>
-          </a>
-          <div class="waitlist-header-controls">
-            <div class="lang-toggle">
-              <select class="lang-select" aria-label="Sprache" title="Sprache">
-                <option value="waitlist.html">English</option>
-                <option value="waitlist-de.html" selected>Deutsch</option>
-              </select>
-            </div>
-            <button
-              class="theme-toggle"
-              type="button"
-              aria-pressed="false"
-              data-theme-toggle
-              data-light-label="Hell"
-              data-dark-label="Dunkel"
-              data-aria-light="Zum hellen Modus wechseln"
-              data-aria-dark="Zum dunklen Modus wechseln"
-            >
-              <span class="theme-toggle-track" aria-hidden="true">
-                <span class="theme-toggle-thumb"></span>
-              </span>
-              <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
-            </button>
-            <a class="back-link" href="index-de.html">Zur Startseite</a>
-          </div>
-        </header>
         <div class="waitlist-only-layout">
           <section class="waitlist-only-content">
             <p class="waitlist-kicker">Frueher Zugang</p>

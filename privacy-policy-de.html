@@ -19,35 +19,42 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="legal-page">
-    <header class="legal-header container">
-      <a class="brand" href="index-de.html">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="logo.svg" alt="" class="brand-logo" />
-        </span>
-      </a>
-      <div class="legal-header-controls">
-        <div class="lang-toggle">
-          <select class="lang-select" aria-label="Sprache" title="Sprache">
-            <option value="privacy-policy.html">English</option>
-            <option value="privacy-policy-de.html" selected>Deutsch</option>
-          </select>
-        </div>
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-pressed="false"
-          data-theme-toggle
-          data-light-label="Hell"
-          data-dark-label="Dunkel"
-          data-aria-light="Zum hellen Modus wechseln"
-          data-aria-dark="Zum dunklen Modus wechseln"
-        >
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb"></span>
+    <header class="site-header-shell">
+      <div class="site-header container">
+        <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.svg" alt="" class="brand-logo" />
           </span>
-          <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
-        </button>
-        <a class="back-link" href="index-de.html">Zur Startseite</a>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="index-de.html#progress">Fortschritt</a>
+          <a href="index-de.html#why-vecta">Warum Vecta</a>
+          <a href="index-de.html#vision">Vision</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-toggle">
+            <select class="lang-select" aria-label="Sprache" title="Sprache">
+              <option value="privacy-policy.html">English</option>
+              <option value="privacy-policy-de.html" selected>Deutsch</option>
+            </select>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-theme-toggle
+            data-light-label="Hell"
+            data-dark-label="Dunkel"
+            data-aria-light="Zum hellen Modus wechseln"
+            data-aria-dark="Zum dunklen Modus wechseln"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
+          </button>
+          <a class="header-cta" href="waitlist-de.html">Fruehen Zugang sichern</a>
+        </div>
       </div>
     </header>
 

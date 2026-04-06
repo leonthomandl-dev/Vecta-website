@@ -19,6 +19,18 @@
   --header-bg: rgba(255, 255, 255, 0.74);
   --header-border: rgba(15, 17, 21, 0.08);
   --header-shadow: 0 16px 38px rgba(13, 22, 36, 0.1);
+  --header-shell-bg: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  --header-shell-border: rgba(255, 255, 255, 0.34);
+  --header-shell-highlight:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.06)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent 32%, rgba(27, 159, 255, 0.1) 100%);
+  --header-shell-shadow:
+    0 16px 36px rgba(13, 22, 36, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
   --control-bg: rgba(255, 255, 255, 0.8);
   --control-bg-hover: rgba(255, 255, 255, 0.96);
   --control-text: #2b303a;
@@ -118,6 +130,18 @@
   --header-bg: rgba(10, 16, 24, 0.76);
   --header-border: rgba(144, 160, 180, 0.18);
   --header-shadow: 0 20px 48px rgba(0, 0, 0, 0.32);
+  --header-shell-bg: linear-gradient(
+    180deg,
+    rgba(15, 24, 36, 0.62) 0%,
+    rgba(8, 14, 22, 0.34) 100%
+  );
+  --header-shell-border: rgba(205, 220, 238, 0.16);
+  --header-shell-highlight:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.015)),
+    linear-gradient(90deg, rgba(118, 168, 230, 0.12), transparent 38%, rgba(39, 202, 114, 0.08) 100%);
+  --header-shell-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   --control-bg: rgba(15, 22, 32, 0.9);
   --control-bg-hover: rgba(19, 28, 40, 0.98);
   --control-text: #eef4fb;
@@ -247,21 +271,53 @@ body {
   margin: 0 auto;
 }
 
-.site-header {
+.site-header-shell {
   position: sticky;
-  top: var(--sticky-header-offset);
+  top: 0;
   z-index: 40;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid var(--header-shell-border);
+  background: var(--header-shell-bg);
+  backdrop-filter: blur(28px) saturate(180%) brightness(1.06);
+  -webkit-backdrop-filter: blur(28px) saturate(180%) brightness(1.06);
+  box-shadow: var(--header-shell-shadow);
+}
+
+.site-header-shell::before,
+.site-header-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.site-header-shell::before {
+  background: var(--header-shell-highlight);
+  opacity: 0.95;
+}
+
+.site-header-shell::after {
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.72) 18%,
+    rgba(255, 255, 255, 0.18) 55%,
+    transparent 100%
+  );
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 2.8rem;
-  margin-top: 1rem;
-  padding: 0.9rem 1.25rem;
-  border: 1px solid var(--header-border);
-  border-radius: 1.55rem;
-  background: var(--header-bg);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--header-shadow);
+  padding: 0.9rem 0;
 }
 
 section[id] {
@@ -917,6 +973,8 @@ section[id] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  padding-top: 0.9rem;
   min-height: 49rem;
 }
 
@@ -1348,15 +1406,13 @@ section[id] {
   line-height: 1.88;
 }
 
-.pillar-grid,
-.feature-grid {
+.pillar-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
 .pillar-card,
-.feature-card,
 .flow-card {
   border-radius: 1.75rem;
   border: 1px solid var(--card-border);
@@ -1367,7 +1423,6 @@ section[id] {
 }
 
 .pillar-index,
-.feature-meta,
 .flow-label {
   display: inline-flex;
   align-items: center;
@@ -1384,7 +1439,6 @@ section[id] {
 }
 
 .pillar-card h3,
-.feature-card h3,
 .flow-card h3 {
   margin: 1.15rem 0 0;
   font-size: 1.24rem;
@@ -1394,7 +1448,6 @@ section[id] {
 }
 
 .pillar-card p,
-.feature-card p,
 .flow-card p {
   margin: 0.85rem 0 0;
   color: var(--card-text);
@@ -1419,10 +1472,6 @@ section[id] {
 
 .flow-list li {
   line-height: 1.5;
-}
-
-.feature-grid {
-  margin-top: 2.1rem;
 }
 
 .benefits-grid {
@@ -1678,6 +1727,40 @@ section[id] {
 
 .waitlist-message.error {
   color: var(--status-error);
+}
+
+.vision-section.container {
+  margin-top: 9rem;
+}
+
+.vision-heading {
+  max-width: none;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+.vision-heading p {
+  text-align: left;
+}
+
+.vision-heading h2 {
+  margin: 0;
+  margin-left: 0;
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(1rem, 2.45vw, 2.85rem);
+}
+
+.vision-figure {
+  width: min(1480px, calc(100vw - 4rem));
+  margin: 0 0 0 50%;
+  transform: translateX(-50%);
+}
+
+.vision-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-footer-bar {
@@ -2097,7 +2180,7 @@ section[id] {
   animation: rise 0.82s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.site-header.reveal {
+.site-header-shell.reveal {
   opacity: 1;
   transform: none;
   animation: none;
@@ -2194,6 +2277,7 @@ section[id] {
   }
 
   .why-vecta-device {
+    padding-top: 0.75rem;
     min-height: 40rem;
   }
 
@@ -2202,7 +2286,6 @@ section[id] {
   }
 
   .pillar-grid,
-  .feature-grid,
   .flow-grid,
   .social-card {
     grid-template-columns: 1fr;
@@ -2227,6 +2310,10 @@ section[id] {
   .social-card {
     align-items: flex-start;
   }
+
+  .vision-section.container {
+    margin-top: 6.5rem;
+  }
 }
 
 @media (max-width: 760px) {
@@ -2244,7 +2331,10 @@ section[id] {
     width: 6.1rem;
   }
 
-  .site-header,
+  .site-header {
+    padding: 0.72rem 0;
+  }
+
   .legal-header {
     padding: 0.72rem 0.9rem;
     border-radius: 1.2rem;
@@ -2312,6 +2402,7 @@ section[id] {
   }
 
   .why-vecta-device {
+    padding-top: 0.6rem;
     min-height: 31rem;
   }
 
@@ -2486,6 +2577,18 @@ section[id] {
     border-width: 0.42rem;
   }
 
+  .vision-section.container {
+    margin-top: 4rem;
+  }
+
+  .vision-figure {
+    width: calc(100vw - 1.6rem);
+  }
+
+  .vision-heading {
+    margin-bottom: 1.15rem;
+  }
+
   .site-footer-bar {
     margin-top: 1.5rem;
   }
@@ -2593,14 +2696,12 @@ section[id] {
 
   .section-intro,
   .pillar-card p,
-  .feature-card p,
   .flow-card p,
   .cta-band-inner span {
     font-size: 0.9rem;
   }
 
   .pillar-card,
-  .feature-card,
   .flow-card,
   .social-card,
   .cta-band-inner {
@@ -2609,7 +2710,6 @@ section[id] {
   }
 
   .pillar-card h3,
-  .feature-card h3,
   .flow-card h3 {
     font-size: 1.02rem;
   }

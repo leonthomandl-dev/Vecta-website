@@ -23,40 +23,41 @@
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
 
-    <header class="site-header container reveal">
-      <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="logo.svg" alt="" class="brand-logo" />
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Hauptnavigation">
-        <a href="#progress">Fortschritt</a>
-        <a href="#why-vecta">Warum Vecta</a>
-        <a href="#features">Funktionen</a>
-      </nav>
-      <div class="header-controls">
-        <div class="lang-toggle">
-          <select class="lang-select" aria-label="Sprache" title="Sprache">
-            <option value="index.html">English</option>
-            <option value="index-de.html" selected>Deutsch</option>
-          </select>
-        </div>
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-pressed="false"
-          data-theme-toggle
-          data-light-label="Hell"
-          data-dark-label="Dunkel"
-          data-aria-light="Zum hellen Modus wechseln"
-          data-aria-dark="Zum dunklen Modus wechseln"
-        >
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb"></span>
+    <header class="site-header-shell reveal">
+      <div class="site-header container">
+        <a class="brand" href="index-de.html" aria-label="Vecta Startseite">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.svg" alt="" class="brand-logo" />
           </span>
-          <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
-        </button>
-        <a class="header-cta" href="waitlist-de.html">Fruehen Zugang sichern</a>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="#progress">Fortschritt</a>
+          <a href="#why-vecta">Warum Vecta</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-toggle">
+            <select class="lang-select" aria-label="Sprache" title="Sprache">
+              <option value="index.html">English</option>
+              <option value="index-de.html" selected>Deutsch</option>
+            </select>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            data-theme-toggle
+            data-light-label="Hell"
+            data-dark-label="Dunkel"
+            data-aria-light="Zum hellen Modus wechseln"
+            data-aria-dark="Zum dunklen Modus wechseln"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-text" data-theme-toggle-label>Hell</span>
+          </button>
+          <a class="header-cta" href="waitlist-de.html">Fruehen Zugang sichern</a>
+        </div>
       </div>
     </header>
 
@@ -278,50 +279,20 @@
         </div>
       </section>
 
-      <section class="test-details container reveal delay-3" id="features">
-        <div class="section-heading test-section-heading">
-          <p>Feature-Bloecke</p>
-          <h2>Gebaut fuer echtes Training, nicht nur zum Erfassen von Saetzen.</h2>
+      <section class="vision-section container reveal delay-3" id="vision">
+        <div class="section-heading vision-heading">
+          <p>Vision</p>
+          <h2>Staerke aufzubauen ist eine Reise. Bleib mit Vecta konsequent dran.</h2>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-meta">01</span>
-            <h3>Logge Workouts, ohne den Flow zu brechen</h3>
-            <p>
-              Starte eine Session schnell, lade ein Template, vergleiche mit
-              vorherigen Saetzen und bewege dich mit weniger Reibung durchs
-              Workout.
-            </p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-meta">02</span>
-            <h3>Sieh Kraftfortschritt auf einen Blick</h3>
-            <p>
-              Verfolge Strength Index, Volumenlast, Top Weights, geschaetzte
-              1RM-Trends und Fortschritt nach Muskelgruppen aus denselben Daten,
-              die du loggst.
-            </p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-meta">03</span>
-            <h3>Bleib langfristig konsistent</h3>
-            <p>
-              Nutze Streaks, Kalender, Badges und Trainingshistorie, um ueber
-              die Zeit Momentum aufzubauen, inklusive Ruhetagen und
-              unterbrochenen Wochen.
-            </p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-meta">04</span>
-            <h3>Gebaut fuer die Art, wie Menschen wirklich trainieren</h3>
-            <p>
-              Nutze bestehende Uebungen, fuege eigene hinzu, logge
-              Bodyweight-Bewegungen, tracke dein Koerpergewicht, scanne
-              Maschinen und trage alte Sessions nach.
-            </p>
-          </article>
-        </div>
+        <figure class="vision-figure">
+          <img
+            src="vision-journey.png"
+            alt="Eine Person auf dem Weg zu einem Berggipfel mit eingeblendeten Vecta Ansichten fuer Fortschritt, Kalender und Workout Logging."
+            class="vision-image"
+          />
+        </figure>
       </section>
+
     </main>
 
     <footer class="site-footer-bar">
